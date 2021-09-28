@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Makeup Items & Beauty Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+        * {
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: 'Yaldevi', sans-serif;
+        }
+     
+        li,a {
+            list-style: none;
+            text-decoration: none;
+        }
+        .topbar {
+            background-color: #ebb1f5;
+            padding:6px;
+            width:100%;
+            display: flex;
+            justify-content: space-around;
+            font-size: 14px;
+            /* position: fixed; */
+        }
+        .topbar a:hover {
+            text-decoration: underline;
+
+        }
+        .log_sign li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px 5px;
+        }
+        .log_sign  a {
+            text-decoration: none;
+            margin:0x 10px;
+            color:black;
+        }
+        .nav {
+            display: inline-block;
+        }
+
+
+        .logo_search {
+            padding: 7px 10%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width:150px;
+            height:60px;
+        }
+  
+        .search input {
+            height: 40px;
+            width:300px;
+            text-align: center;
+
+        }
+        .search_wish_cart li {
+            display:inline-block;
+            margin:5px 20px;
+        }
+        #Top_search {
+            background-color: rgb(250, 249, 243);
+            position: fixed;
+            width:300px;
+            box-shadow: rgba(red,250,100, 0.6);
+            border-radius: 5px;
+            padding : 20px;
+            line-height: 30px;
+            display: flex;
+            flex-direction: column;
+            display: none;
+         
+        }
+        #Top_search a {
+            background-color: rosybrown;
+            margin:5px;
+        
+        }
+   
+        /* #search_input: + #Top_search {
+            display:flex;
+        } */
+
+
+        .navlist {
+            background-color: black;
+            color:white;
+            padding:10px;
+            font-size: 14px;
+            font-weight: bold;
+            padding-left: 10%;
+            width:100%;
+        }
+        .navlist a:hover {
+            text-decoration: underline;
+            
+        }
+        .navlist a {
+            margin:10px;
+            color:white;
+            
+        }
+        
+        #slide {
+            width:80%;
+            margin:auto;
+            height:350px
+        }
+        .image {
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
+        <div class="log_sign">
+            <ul class="nav">
+            <li><a href="#">Track Order</a></li>
+            <li> &reg; </li>
+            <li><a href="#">Login</a></li>
+            <li>or</li>
+            <li> <a href="#">Create an account</a></li>
+        </ul>
+        </div>
+    </div>
+   
+   
+    <div class="logo_search">
+
+        <div class="logo">
+            <a href="index.html"><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/website_logo.png?v=1609240506" alt="There could be logo" ></a>
+        </div>
+
+        <div class="search">
+         <ul class="search_wish_cart">
+           
+            <li> <input type="text" placeholder="type to search" id="search_input">
+                <div id="Top_search" class="hide_search">
+                    <a href="#">New arrival</a>
+                    <a href="#">Makeup Kit</a>
+                    <a href="#">Make Revolution</a>
+                    <a href="#">Milani</a>
+                    <a href="#">L.A. Girl</a>
+                </div>
+           <a href="#"><i class="fas fa-search" ></i></a>
+           </li>
+          
+           <li style="font-size:24px"><a href="#"> &#9825; </a> </li>
+          
+           <li><a href="#"> <i style="font-size:24px" class="fa">&#xf07a;</i> </a></li>
+         </ul>
+        </div>
+
+    </div>
+
+    <div class="navlist">
+
+        <a href="#">NEW ARRIVALS</a>
+         <a href="#">MAKE UP</a>
+         <a href="#">SKIN</a>
+         <a href="#">BRANDS</a>
+         <a href="#">KITS&COMBOS</a>
+         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 3px; padding:3px">HOT</sup></a>
+         <a href="#">TUTORIALS</a>
+
+    </div>
+
+    <div id="slide"></div>
+    
+</body>
+
+<script>
+
+let search = document.getElementById("Top_search")
+let text = search.querySelectorAll("a")
+let search_input = document.getElementById("search_input")
+search_input.addEventListener("click",show)
+search_input.addEventListener("mouseover",hide)
+function show(e) { 
+search_input.textContent = text.textContent
+   search.style.display = "flex"
+}
+function hide() {
+    search.style.display = "none"
+}
+
+
+
+setTimeout(function(){
+    alert("Never miss a sale \nSubscribe to get updates on our new products and exclusive promotions")
+},3000)
+
+let images = [
+    "https://th.bing.com/th/id/OIP.17n6cng1dsY2Yxw6eMUIaQHaEo?w=248&h=180&c=7&r=0&o=5&pid=1.7",
+    "https://www.bing.com/th?id=OIP.m1JkU307JxjfaI6o3fk6RwHaD_&w=208&h=110&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+    "https://www.bing.com/th?id=OIP.rH1ssomuw42FE9LrUwNBCwHaE8&w=176&h=110&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+    "https://www.bing.com/th?id=OIP.grhNDUkImMmGd28tsWb30AHaE8&w=131&h=88&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+]
+
+
+  
+
+    let container = document.getElementById("slide")
+
+    let img1 = document.createElement("img")
+    img1.setAttribute("class" , "image")
+    img1.src = images[images.length-1]
+    container.append(img1)
+
+    let interval;
+
+    function startslideshow() {
+
+        let count = 0;
+
+        interval = setInterval(function(){
+
+            container.innerHTML = null;
+
+            if(count == images.length) {
+                count = 0;
+            } 
+
+            let img = document.createElement("img") 
+            img.setAttribute("class" , "image")
+            img.src= images[count]
+
+            container.append(img)
+            count++
+
+        },2000)
+
+    }
+
+    startslideshow()
+</script>
+</html>
