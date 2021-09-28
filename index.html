@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Makeup Items & Beauty Products</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <style>
+         html {
+        scroll-behavior: smooth;
+        
+    }
         * {
             margin:0px;
             padding:0px;
             box-sizing: border-box;
-            font-family: 'Yaldevi', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
      
         li,a {
@@ -23,17 +27,18 @@
             text-decoration: none;
         }
         .topbar {
-            background-color: #ebb1f5;
-            padding:6px;
+            background-color: #F4DDEE;
+            padding:10px 12%;
             width:100%;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             font-size: 14px;
+
             /* position: fixed; */
         }
         .topbar a:hover {
             text-decoration: underline;
-
+            transition: 0.9;
         }
         .log_sign li {
             list-style: none;
@@ -51,7 +56,7 @@
 
 
         .logo_search {
-            padding: 7px 10%;
+            padding: 15px 10%;
             display:flex;
             justify-content: space-between;
             align-items: center;
@@ -62,10 +67,20 @@
         }
   
         .search input {
-            height: 40px;
-            width:300px;
-            text-align: center;
-
+            height: 45px;
+            width:250px;
+           
+            margin-right: 0px;
+            border:1px solid rgb(209, 199, 199);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .search_btn {
+            margin-left: 0px;
+            height:45px;
+            width:35px;
+            background-color: #FFFFFF;
+            border: 1px solid rgb(209, 199, 199);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
         }
         .search_wish_cart li {
             display:inline-block;
@@ -89,14 +104,32 @@
             margin:5px;
         
         }
-   
-        /* #search_input: + #Top_search {
-            display:flex;
-        } */
+        #cart {
+            text-align: center;
+            width:25%;
+            position: fixed;
+            line-height: 50px;
+            border-radius: 10px;
+            background-color: white;
+            border-radius: 10px;
+            display:none;
+        }
+        #cart button {
+            background-color: #FF66B9;
+            padding:5px 20px;
+            color:white;
+            width:90%;
+            border-radius: 8px;
+        }
+    
+
+
+
+
 
 
         .navlist {
-            background-color: black;
+            background-color: #383E47;
             color:white;
             padding:10px;
             font-size: 14px;
@@ -123,6 +156,30 @@
             width:100%;
             height:100%;
         }
+        .makeup {
+            display:flex;
+            padding:10px;
+            background-color: white;
+            position: absolute;
+            padding-left: 10%;
+            width:100%;
+            font-size: 12px;
+            display:none;
+        }
+        .makeup div {
+            margin:10px;
+            color:black;
+            line-height: 30px;
+            
+        }
+        .makeup div a {
+            text-decoration: none;
+        }
+        .color-pink {
+            color:#FF66B9;
+            font-weight: bold;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -132,7 +189,7 @@
         <div class="log_sign">
             <ul class="nav">
             <li><a href="#">Track Order</a></li>
-            <li> &reg; </li>
+            <li style="font-size: 16px;"> &reg; </li>
             <li><a href="#">Login</a></li>
             <li>or</li>
             <li> <a href="#">Create an account</a></li>
@@ -150,29 +207,39 @@
         <div class="search">
          <ul class="search_wish_cart">
            
-            <li> <input type="text" placeholder="type to search" id="search_input">
+            <li> <input type="text" placeholder="search for products & brands etc," id="search_input">
+                <a href="#"><button class="search_btn"><i class="fas fa-search" ></button></i></a>
                 <div id="Top_search" class="hide_search">
+                    <p>TRENDING</p>
                     <a href="#">New arrival</a>
                     <a href="#">Makeup Kit</a>
                     <a href="#">Make Revolution</a>
                     <a href="#">Milani</a>
                     <a href="#">L.A. Girl</a>
                 </div>
-           <a href="#"><i class="fas fa-search" ></i></a>
+           
            </li>
           
-           <li style="font-size:24px"><a href="#"> &#9825; </a> </li>
+           <li ><a href="#" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
           
-           <li><a href="#"> <i style="font-size:24px" class="fa">&#xf07a;</i> </a></li>
-         </ul>
-        </div>
-
+           <li><a href="#"> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
+          
+    <div id="cart">
+        <p>Your cart is currently empty</p>
+        <a href="#"><button>Continue Shopping</button></a>
     </div>
+           
+         </ul>
+        
+        </div>
+    </div>
+
 
     <div class="navlist">
 
         <a href="#">NEW ARRIVALS</a>
-         <a href="#">MAKE UP</a>
+        
+         <a href="#" id="make_up">MAKE UP</a>
          <a href="#">SKIN</a>
          <a href="#">BRANDS</a>
          <a href="#">KITS&COMBOS</a>
@@ -180,18 +247,79 @@
          <a href="#">TUTORIALS</a>
 
     </div>
+    <div class="makeup">
+        <div>
+            <p><a href="#" class="color-pink">Eyes</a></p>
+            <p><a href="#">EyeBrow Enhancer</a></p>
+            <p><a href="#">Eye liner</a></p>
+            <p><a href="#">Eye primer</a></p>
+            <p><a href="#">Eye shadow</a></p>
+            <p><a href="#">False eyelashes</a></p>
+            <p><a href="#">Kajal</a></p>
+            <p><a href="#">Mascara</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Face</a></p>
+            <p><a href="#">Blush</a></p>
+            <p><a href="#">B.B / C.C cream</a></p>
+            <p><a href="#">Bronzer</a></p>
+            <p><a href="#">Compact</a></p>
+            <p><a href="#">Concealer</a></p>
+            <p><a href="#">Contour</a></p>
+            <p><a href="#">Foundation</a></p>
+            <p><a href="#">Highlighter</a></p>
+            <p><a href="#">Loose power</a></p>
+            <p><a href="#">Primer</a></p>
+            <p><a href="#">Makeup remover</a></p>
+            <p><a href="#">Setting Spray</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Lips</a></p>
+            <p><a href="#">Lip Balm</a></p>
+            <p><a href="#">Lip Gloss</a></p>
+            <p><a href="#">Lip liner</a></p>
+            <p><a href="#">Lipstick</a></p>
+            <p><a href="#">Liquid Lipstick</a></p>
 
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Nails</a></p>
+            <p><a href="#">Nail Polish</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Tools & Brushes</a></p>
+            <p><a href="#">Brush set</a></p>
+            <p><a href="#">Face brush</a></p>
+            <p><a href="#">Eye brush</a></p>
+            <p><a href="#">Lip brush</a></p>
+            <p><a href="#">Sponges and Applicators</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Kits</a></p>
+            <p><a href="#">Eye Palettes</a></p>
+            <p><a href="#">Face palettes</a></p>
+        </div>
+     </div>
     <div id="slide"></div>
     
 </body>
 
 <script>
 
+    //for search portion
+
+let Top_search = document.getElementById("Top_search")
+
 let search = document.getElementById("Top_search")
+
 let text = search.querySelectorAll("a")
+
 let search_input = document.getElementById("search_input")
+
 search_input.addEventListener("click",show)
-search_input.addEventListener("mouseover",hide)
+
+Top_search.addEventListener("mouseleave",hide)
+
 function show(e) { 
 search_input.textContent = text.textContent
    search.style.display = "flex"
@@ -199,16 +327,53 @@ search_input.textContent = text.textContent
 function hide() {
     search.style.display = "none"
 }
+//end of search portion
+
+// for cart icon portion
+
+let cart_pop = document.getElementById("cart")
+let cart_icon = document.getElementById("cart_icon")
+cart_icon.addEventListener("click", pop)
+cart_pop.addEventListener("mouseleave", hiden)
+
+function pop () {
+    cart_pop.style.display = "block" 
+}
+function hiden() {
+    cart_pop.style.display = "none"
+}
+// end of cart icon
+
+//for makeup pop 
+
+let makup = document.getElementsByClassName("makeup")[0]
+
+let make_up = document.getElementById("make_up")
+
+make_up.addEventListener("mouseover" , disply)
+make_up.addEventListener("mouseleave" , hidemakeup)
+function disply(){
+    makup.style.display ="flex"
+}
+function hidemakeup() {
+    makup.style.display="none"
+}
+
+
+
+
+
+
 
 
 
 setTimeout(function(){
     alert("Never miss a sale \nSubscribe to get updates on our new products and exclusive promotions")
-},3000)
+},4000)
 
 let images = [
     "https://th.bing.com/th/id/OIP.17n6cng1dsY2Yxw6eMUIaQHaEo?w=248&h=180&c=7&r=0&o=5&pid=1.7",
-    "https://www.bing.com/th?id=OIP.m1JkU307JxjfaI6o3fk6RwHaD_&w=208&h=110&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
+    "https://cdn.shopify.com/s/files/1/1743/7443/files/xx-revolution.gif?v=1631268320",
     "https://www.bing.com/th?id=OIP.rH1ssomuw42FE9LrUwNBCwHaE8&w=176&h=110&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
     "https://www.bing.com/th?id=OIP.grhNDUkImMmGd28tsWb30AHaE8&w=131&h=88&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
 ]
@@ -249,5 +414,10 @@ let images = [
     }
 
     startslideshow()
+
+
+
+
+
 </script>
 </html>
