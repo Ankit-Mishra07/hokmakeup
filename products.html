@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+html {
+        scroll-behavior: smooth;
+        
+    }
+        * {
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+     
+        li,a {
+            list-style: none;
+            text-decoration: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .topbar {
+            background-color: #F4DDEE;
+            padding:10px 12%;
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+
+            /* position: fixed; */
+        }
+        .topbar a:hover {
+            text-decoration: underline;
+            transition: 0.9;
+        }
+        .log_sign li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px 5px;
+        }
+        .log_sign  a {
+            text-decoration: none;
+            margin:0x 10px;
+            color:black;
+        }
+        .nav {
+            display: inline-block;
+        }
+
+
+        .logo_search {
+            padding: 15px 10%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width:150px;
+            height:60px;
+        }
+  
+        .search input {
+            height: 45px;
+            width:250px;
+           
+            margin-right: 0px;
+            border:1px solid rgb(209, 199, 199);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .search_btn {
+            margin-left: 0px;
+            height:45px;
+            width:35px;
+            background-color: #FFFFFF;
+            border: 1px solid rgb(209, 199, 199);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .search_wish_cart li {
+            display:inline-block;
+            margin:5px 20px;
+        }
+        #Top_search {
+            background-color: rgb(250, 249, 243);
+            position: fixed;
+            width:300px;
+            box-shadow: rgba(red,250,100, 0.6);
+            border-radius: 5px;
+            padding : 20px;
+            line-height: 30px;
+            display: flex;
+            flex-direction: column;
+            display: none;
+         
+        }
+        #Top_search a {
+            background-color: rosybrown;
+            margin:5px;
+        
+        }
+        #cart {
+            text-align: center;
+            width:25%;
+            position: fixed;
+            line-height: 50px;
+            border-radius: 10px;
+            background-color: white;
+            border-radius: 10px;
+            display:none;
+        }
+        #cart button {
+            background-color: #FF66B9;
+            padding:5px 20px;
+            color:white;
+            width:90%;
+            border-radius: 8px;
+        }
+    
+
+
+
+
+
+
+        .navlist {
+            background-color: #383E47;
+            color:white;
+            padding:10px;
+            font-size: 14px;
+            font-weight: bold;
+            padding-left: 10%;
+            width:100%;
+        }
+        .navlist a:hover {
+            text-decoration: underline;
+            
+        }
+        .navlist a {
+            margin:10px;
+            color:white;
+            
+        }
+       
+        .makeup {
+            display:flex;
+            padding:10px;
+            background-color: white;
+            position: absolute;
+            padding-left: 10%;
+            width:100%;
+            font-size: 12px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+            display:none;
+        }
+        .makeup div {
+            margin:10px;
+            color:black;
+            line-height: 30px;
+            
+        }
+        .makeup div a {
+            text-decoration: none;
+        }
+        .color-pink {
+            color:#FF66B9;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #kits_combos {
+            width:11.5%;
+            margin-left: 32.5%;
+            background-color: white;
+            line-height: 25px;
+            display:block;
+            font-size: 15px;
+            padding:10px;
+            position:absolute;
+            display:none;
+        }
+        #kits_combos p a {
+            text-decoration: none;
+        }
+
+
+        .home_product {
+            background-color: #F7F7F7;
+            padding:20px 10% 30px 10%;
+
+        }
+        .home_product p a {
+            text-decoration: none;
+            font-size: 12px;
+            color: black;
+            /* margin:10px; */
+        }
+
+
+        #container {
+            width:80%;
+            margin-left: 10%;
+            display:flex;
+            margin-top: 2%;
+        }
+
+        #side-btns {
+            width:17%;
+            display: inline-block;
+        }
+        #side-btns > div {
+            border:1px solid #d7e7f0;
+            margin-bottom: 15%;
+            box-sizing: content-box;
+            padding: 10px 20px ;
+            line-height: 35px;
+        }
+        #side-btns > div > div {
+            border-bottom: 1px solid #d7e7f0 ;
+        }
+        #side-btns div label {
+         font-size: 10px;   
+        }
+       
+        #box {
+            
+            display:grid;
+            grid-template-columns: 24% 24% 24% 24%;
+            width:80%;
+            margin-left: 3%;
+            grid-gap:1.3%;
+        }
+        #box img {
+            width: 100%;
+            height:50%
+        }
+
+        .margin {
+            color: #a1a2a5;
+            font-weight: bold;
+            display:inline-block;
+            margin:30px 5px 20px;
+        }
+        .price {
+            color:#FF66B9;
+            display:inline-block;
+            font-weight: bold;
+            margin: 30px 5px 20px;
+        }
+
+        .cartbtn {
+            display:block;
+            background-color: white;
+            border:1px solid #FF66B9;
+            width:100%;
+            text-align: center;
+            padding:10px;
+            
+            color:#FF66B9;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .cartbtn:hover {
+            background-color: #FF66B9;
+            color:white;
+        }
+        .brand {
+            color:#a1a2a5;
+            font-size: 14px;
+            margin:5px;
+        }
+        .name {
+            font-weight: bold;
+            font-size: 12px;
+            margin:5px;
+
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
+        <div class="log_sign">
+            <ul class="nav">
+            <li><a href="#">Track Order</a></li>
+            <li style="font-size: 10px;"> <i style='font-size:15px' class='fas'>&#xf406;</i> </li>
+            <li><a href="#">Login</a></li>
+            <li>or</li>
+            <li> <a href="#">Create an account</a></li>
+        </ul>
+        </div>
+    </div>
+   
+   
+    <div class="logo_search">
+
+        <div class="logo">
+            <a href="index.html"><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/website_logo.png?v=1609240506" alt="There could be logo" ></a>
+        </div>
+
+        <div class="search">
+         <ul class="search_wish_cart">
+           
+            <li> <input type="text" placeholder="search for products & brands etc," id="search_input">
+                <a href="#"><button class="search_btn"><i class="fas fa-search" ></button></i></a>
+                <div id="Top_search" class="hide_search">
+                    <p>TRENDING</p>
+                    <a href="#">New arrival</a>
+                    <a href="#">Makeup Kit</a>
+                    <a href="#">Make Revolution</a>
+                    <a href="#">Milani</a>
+                    <a href="#">L.A. Girl</a>
+                </div>
+           
+           </li>
+          
+           <li ><a href="#" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
+          
+           <li><a href="#"> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
+          
+    <div id="cart">
+        <p>Your cart is currently empty</p>
+        <a href="#"><button>Continue Shopping</button></a>
+    </div>
+           
+         </ul>
+        
+        </div>
+    </div>
+
+
+    <div class="navlist">
+
+        <a href="#">NEW ARRIVALS</a>
+        
+         <a href="#" id="make_up">MAKE UP</a>
+         <a href="#" id="for_skin">SKIN</a>
+         <a href="#">BRANDS</a>
+         <a href="#" id="kits&combos">KITS&COMBOS</a>
+         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
+         <a href="#">TUTORIALS</a>
+
+    </div>
+    <div class="makeup">
+        <div>
+            <p><a href="#" class="color-pink">Eyes</a></p>
+            <p><a href="#">EyeBrow Enhancer</a></p>
+            <p><a href="#">Eye liner</a></p>
+            <p><a href="#">Eye primer</a></p>
+            <p><a href="#">Eye shadow</a></p>
+            <p><a href="#">False eyelashes</a></p>
+            <p><a href="#">Kajal</a></p>
+            <p><a href="#">Mascara</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Face</a></p>
+            <p><a href="#">Blush</a></p>
+            <p><a href="#">B.B / C.C cream</a></p>
+            <p><a href="#">Bronzer</a></p>
+            <p><a href="#">Compact</a></p>
+            <p><a href="#">Concealer</a></p>
+            <p><a href="#">Contour</a></p>
+            <p><a href="#">Foundation</a></p>
+            <p><a href="#">Highlighter</a></p>
+            <p><a href="#">Loose power</a></p>
+            <p><a href="#">Primer</a></p>
+            <p><a href="#">Makeup remover</a></p>
+            <p><a href="#">Setting Spray</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Lips</a></p>
+            <p><a href="#">Lip Balm</a></p>
+            <p><a href="#">Lip Gloss</a></p>
+            <p><a href="#">Lip liner</a></p>
+            <p><a href="#">Lipstick</a></p>
+            <p><a href="#">Liquid Lipstick</a></p>
+
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Nails</a></p>
+            <p><a href="#">Nail Polish</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Tools & Brushes</a></p>
+            <p><a href="#">Brush set</a></p>
+            <p><a href="#">Face brush</a></p>
+            <p><a href="#">Eye brush</a></p>
+            <p><a href="#">Lip brush</a></p>
+            <p><a href="#">Sponges and Applicators</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Kits</a></p>
+            <p><a href="#">Eye Palettes</a></p>
+            <p><a href="#">Face palettes</a></p>
+        </div>
+     </div>
+
+     <div class="makeup">
+        <div>
+            <p><a href="#" class="color-pink">Face</a></p>
+            <p><a href="#">Cleanser</a></p>
+            <p><a href="#">cream</a></p>
+            <p><a href="#">Face mask</a></p>
+            <p><a href="#">Serum & Oil</a></p>
+            <p><a href="#">Face Wash</a></p>
+            <p><a href="#">Facial Mist</a></p>
+            <p><a href="#">Facial Wipes</a></p>
+            <p><a href="#">Gel</a></p>
+            <p><a href="#">Scrub</a></p>
+            <p><a href="#">Moisturizer</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Eyes</a></p>
+            <p><a href="#">Eye Cream</a></p>
+            <p><a href="#">Eye Patch</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Lip Care</a></p>
+            <p><a href="#">Lip Balm</a></p>
+            <p><a href="#">Petrolium Jelly</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Bath & Body</a></p>
+            <p><a href="#">Shower Gel</a></p>
+            <p><a href="#">Foot Scrub</a></p>
+            <p><a href="#">Body Oil</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Hair</a></p>
+            <p><a href="#">Hair Masque</a></p>
+            <p><a href="#">Hair Gel</a></p>
+            <p><a href="#">Shampoo</a></p>
+        </div>
+    </div>
+    
+    <div id="kits_combos">
+        <p><a href="#">Combos</a></p>
+        <p><a href="#">Basic KIts</a></p>
+        <p><a href="#">Customisable Kits - </br> Basic</a></p>
+        <p><a href="#">Customisable Kits - </br> Professional</a></p>
+    </div>
+     
+     <div>
+         <img src="https://cdn.shopify.com/s/files/1/1743/7443/files/KITS.jpg?v=1631268360" width="100%" Height="300px">
+     </div>
+     
+     <div class="home_product">
+         <p style="display: inline-block;"><a href="index.html">Home</a></p>
+         <p style="display: inline-block; margin:0px 10px">  > </p>
+         <p style="display: inline-block;"><a href="products.html">Products</a></p>
+         <h1>Products</h1>
+     </div>
+     
+     <div style="display:flex">
+        <p>View as</p>
+        <button>=</button>
+        <button>|||</button>
+        <button>||||</button>
+     </div>
+
+     <div id="container">
+     <div id="side-btns">
+        <div>
+            <div><h4>CATEGORY</h4></div>
+            <input type="checkbox" id="eyes">
+            <lable>Eyes</lable> <br>
+            <input type="checkbox" id="lips">
+            <lable>Lips</lable>
+        </div>
+        <div>
+            <div><h4>BRAND</h4></div>
+            <input type="checkbox" id="Beauty-creations">
+            <lable>Beauty Creation</lable> <br>
+            <input type="checkbox" id="Hok-Makeup">
+            <lable>Hok Makeup</lable> <br>
+            <input type="checkbox" id="Revolution Beauty">
+            <lable>Revolution Beauty</lable>
+        </div>
+        <div>
+            <div><h4>PRICE</h4></div>
+            <input type="checkbox" id="0-499">
+            <lable>Rs.0 - Rs.499</lable> <br>
+            <input type="checkbox" id="500-999">
+            <lable>Rs.500 - Rs.999</lable> <br>
+            <input type="checkbox" id="1000-1999">
+            <lable>Rs.1000 - Rs.1999</lable>
+        </div>
+        <div>
+            <div><h4>DISCOUNT</h4></div>
+            <input type="checkbox" id="15%">
+            <lable>Upto 15%</lable> <br>
+            <input type="checkbox" id="30-50%">
+            <lable>30% - 50%</lable> <br>
+            <input type="checkbox" id="50%">
+            <lable>50% & Above</lable>
+        </div>
+     </div>
+     
+        <div id="box"></div>
+
+    </div>
+</body>
+
+<script>
+
+    //for search portion
+
+let Top_search = document.getElementById("Top_search")
+
+let search = document.getElementById("Top_search")
+
+let text = search.querySelectorAll("a")
+
+let search_input = document.getElementById("search_input")
+
+search_input.addEventListener("click",show)
+
+Top_search.addEventListener("mouseleave",hide)
+
+function show(e) { 
+search_input.textContent = text.textContent
+   search.style.display = "flex"
+}
+function hide() {
+    search.style.display = "none"
+}
+//end of search portion
+
+// for cart icon portion
+
+let cart_pop = document.getElementById("cart")
+let cart_icon = document.getElementById("cart_icon")
+cart_icon.addEventListener("click", pop)
+cart_pop.addEventListener("mouseleave", hiden)
+
+function pop () {
+    cart_pop.style.display = "block" 
+}
+function hiden() {
+    cart_pop.style.display = "none"
+}
+// end of cart icon
+
+//for makeup pop 
+
+let makup = document.getElementsByClassName("makeup")[0]
+
+let make_up = document.getElementById("make_up")
+
+make_up.addEventListener("mouseover" , disply)
+make_up.addEventListener("mouseleave" , hidemakeup)
+function disply(){
+    makup.style.display ="flex"
+}
+function hidemakeup() {
+    makup.style.display="none"
+}
+
+// end of makeup
+
+// for skin pop 
+
+let skin = document.getElementsByClassName("makeup")[1]
+
+let for_skin = document.getElementById("for_skin")
+
+for_skin.addEventListener("mouseover" , disply2)
+for_skin.addEventListener("mouseleave" , hideskin)
+function disply2(){
+    skin.style.display ="flex"
+}
+function hideskin() {
+    skin.style.display="none"
+}
+//end skin pop
+
+// for kit&combos pop
+
+
+// let kitsandcombos = document.getElementById("Kits&combos")
+
+// let kits = document.getElementById("kits_combos")
+
+// kitsandcombos.addEventListener("mouseover" , showkit)
+// kitsandcombos.addEventListener("mouseleave" , hidkit)
+
+
+// function showkit() {
+//     kits.style.display = "block"
+// }
+// function hidkit() {
+//     kits.style.display = "none"
+// }
+
+
+let products = [
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/trrg_dab87991-7380-411b-9b00-f19f08e2e7ee_270x270.jpg?v=1630136456",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-icon-eye-shadow-palette-smoked-1_e7f487b8-a5f3-4cc7-bbd3-352a089e9787_270x270.jpg?v=1630136485",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/NF014_ff6c433e-7c40-4818-9fb5-e868a6dfceb9_270x270.png?v=1630136460",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/Combo1_2_270x270.jpg?v=1630136457",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "800",
+        price:"375"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/editedimages_a4985847-a7be-458b-b664-2d51e765b7a7_270x270.jpg?v=1630136486",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-lip-mousse-pin-up_9241a5e4-65eb-4473-aefa-8733c08d2d18_270x270.jpg?v=1630136474",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "650",
+        price:"200"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Combo2_2_270x270.jpg?v=1630136471",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-lip-mousse-pin-up_9241a5e4-65eb-4473-aefa-8733c08d2d18_270x270.jpg?v=1630136474",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-icon-eye-shadow-palette-smoked-1_a02914b4-46c1-4a31-8f90-6eeb4035d2b1_270x270.jpg?v=1630136473",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/Absolute-New-York-Eyeliner-Brown_9555f4bf-211b-458f-b6ac-12f1ca806221_270x270.jpg?v=1630136473",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-icon-eye-shadow-palette-smoked-1_e7f487b8-a5f3-4cc7-bbd3-352a089e9787_270x270.jpg?v=1630136485",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-lip-mousse-lavish_0a4f6055-416e-455f-9917-7b92a3efac5d_270x270.jpg?v=1630136473",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/trrg_dab87991-7380-411b-9b00-f19f08e2e7ee_270x270.jpg?v=1630136456",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-lip-mousse-pin-up_b4ab82f2-65f5-4cde-a016-25472a521c43_270x270.jpg?v=1630136485",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations3_1_3fb56160-e757-425a-8a22-8a0c6e1ef40e_270x270.jpg?v=1630136605",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/Pinky_Promise_270x270.jpg?v=1630136505",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Bae_270x270.jpg?v=1630136605",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations2_1_2676f638-3ee4-4866-b6cd-b611fc0ac0f0_270x270.jpg?v=1630136607",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations1_1_0b8633db-de58-41da-ad8e-a40325250520_270x270.jpg?v=1630136628",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations3_1_fcc65a11-0959-43e9-a505-e0fe47067bb7_270x270.jpg?v=1630136623",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations1_1_8f64da04-9f3a-4642-826b-d125434122ed_270x270.jpg?v=1630136620",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/beauty-creations-mini-pro-palette-vol-1_f38b196c-1614-4c6c-8bde-0c7408109496_270x270.jpg?v=1630138242",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/trrg_dab87991-7380-411b-9b00-f19f08e2e7ee_270x270.jpg?v=1630136456",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/mini_pro_2_270x270.jpg?v=1630137817",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/beauty-creations-mini-pro-palette-vol-1_ab1af620-e2ad-4589-b6a0-a685cb5afb7c_270x270.jpg?v=1630138241",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/mini_pro_1_270x270.jpg?v=1630136683",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/E757A_df70512d-dafb-43d2-801f-d7f1a739bba6_270x270.jpg?v=1630136693",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/02_270x270.jpg?v=1630136686",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/beauty-creations-splash-of-hues-vol-2-2_270x270.jpg?v=1630136693",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/Probrowkit-01_270x270.jpg?v=1630136687",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/ESO904_270x270.jpg?v=1630136693",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/Probrowkit-01_270x270.jpg?v=1630136687",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    }
+]
+
+let parent = document.getElementById("box")
+
+function showhokproduct() {
+    products.forEach(function(products) {
+
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+        img.src = products.img
+
+        img.addEventListener("mouseover" , setnewimg)
+        img.addEventListener("mouseleave" , setoldimg)
+
+        function setnewimg() {
+            img.src = products.img2
+        }
+        function setoldimg() {
+            img.src = products.img
+        }
+
+        let brand = document.createElement("p")
+        brand.setAttribute("class" , "brand")
+        brand.textContent = products.brand
+
+        let name = document.createElement("p")
+        name.setAttribute("class" , "name")
+        name.textContent = products.name
+
+        let margin = document.createElement("del")
+        margin.textContent = "₹" + " " + products.margin
+        margin.setAttribute("class" , "margin")
+
+        let price = document.createElement("p")
+        price.setAttribute("class" , "price")
+        price.textContent =  "₹" + " " +products.price
+
+
+        let addtocart_btn = document.createElement("button")
+        addtocart_btn.setAttribute("class" , "cartbtn")
+        addtocart_btn.innerText = "ADD TO CART"
+
+
+        addtocart_btn.onclick = function() {
+
+        addtocart(products)
+
+        };
+
+        div.append(img,brand,name,margin,price,addtocart_btn)
+        parent.append(div)
+    })
+}
+showhokproduct()
+
+if(localStorage.getItem("hokcart") === null) {
+    localStorage.setItem("hokcart" , JSON.stringify([]))
+}
+
+function addtocart(products) {
+    let products_cart = JSON.parse(localStorage.getItem("hokcart"));
+
+    products_cart.push(products)
+
+    localStorage.setItem("hokcart" , JSON.stringify(products_cart))
+}
+
+
+
+
+</script>
+</html>
