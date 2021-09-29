@@ -110,7 +110,7 @@ html {
         }
         #cart {
             text-align: center;
-            width:25%;
+            width:22%;
             position: fixed;
             line-height: 50px;
             border-radius: 10px;
@@ -119,11 +119,16 @@ html {
             display:none;
         }
         #cart button {
-            background-color: #FF66B9;
+            background-color: white;
             padding:5px 20px;
             color:white;
             width:90%;
             border-radius: 8px;
+            color:black;
+        }
+        #cart button:hover {
+            color:#FF66B9;
+            background-color: #383E47;
         }
     
 
@@ -242,6 +247,13 @@ html {
             width: 100%;
             height:50%
         }
+        #box2 {
+            display:grid;
+            grid-template-columns:32.5% 32.5% 32.5%;
+            width:80%;
+            grid-gap: 1.5%;
+            margin-left: 3%;
+        }
 
         .margin {
             color: #a1a2a5;
@@ -284,6 +296,38 @@ html {
             margin:5px;
 
         }
+        #feature {
+            display:flex;
+            margin-left: 60%;
+            padding:5px;
+
+        }
+        #feature p, #feature select {
+            margin:5px;
+        }
+        #feature p, #feature button {
+            font-weight: bold;
+        }
+       #feature button {
+           width:20px;
+           background-color: white;
+           opacity: 0.5;
+       }
+       #feature button:hover {
+           opacity: 2;
+       }
+       .showfeat {
+           display:flex;
+           flex-direction: column;
+           background-color: white;
+           width:200px;
+           position:absolute;
+           margin-left: 74%;
+           display: none;
+       }
+       .showfeat button {
+           width:100%;
+       }
       
     </style>
 </head>
@@ -329,8 +373,8 @@ html {
            <li><a href="#"> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
           
     <div id="cart">
-        <p>Your cart is currently empty</p>
-        <a href="#"><button>Continue Shopping</button></a>
+        <p></p>
+        <a href="hokcart.html"><button>View Cart</button></a>
     </div>
            
          </ul>
@@ -461,12 +505,22 @@ html {
          <h1>Products</h1>
      </div>
      
-     <div style="display:flex">
+     <div id="feature">
         <p>View as</p>
-        <button>=</button>
-        <button>|||</button>
-        <button>||||</button>
+        <button onclick="onecol()">=</button>
+        <button onclick="threecol()">|||</button>
+        <button onclick="fourcol()">||||</button>
+        <p>SORT BY</p>
+        <button onclick="showfeature()" style="width:200px">Featured &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;▼</button>
+        <!-- <button onclick="sortLH()">lh</button> -->
      </div>
+     <div class="showfeat">
+        <button>Featured</button>
+        <a href="#"><button>Best selling</button></a>
+        <button onclick="sortLH()">Price low to high</button>
+        <button onclick="sortHL()">Price high to low</button>
+        <a><button>What's new</button></a>
+    </div>
 
      <div id="container">
      <div id="side-btns">
@@ -537,7 +591,8 @@ function hide() {
 //end of search portion
 
 // for cart icon portion
-
+let count = 0;
+if(count == 0) {
 let cart_pop = document.getElementById("cart")
 let cart_icon = document.getElementById("cart_icon")
 cart_icon.addEventListener("click", pop)
@@ -548,6 +603,7 @@ function pop () {
 }
 function hiden() {
     cart_pop.style.display = "none"
+}
 }
 // end of cart icon
 
@@ -613,7 +669,7 @@ let products = [
         price:"275"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/NF014_ff6c433e-7c40-4818-9fb5-e868a6dfceb9_270x270.png?v=1630136460",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Pinky_Promise_270x270.jpg?v=1630136505",
         img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/Combo1_2_270x270.jpg?v=1630136457",
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
@@ -713,8 +769,8 @@ let products = [
         img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/02_270x270.jpg?v=1630136686",
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
-        margin: "750",
-        price:"275"
+        margin: "550",
+        price:"175"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/beauty-creations-splash-of-hues-vol-2-2_270x270.jpg?v=1630136693",
@@ -722,7 +778,7 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
-        price:"275"
+        price:"455"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/ESO904_270x270.jpg?v=1630136693",
@@ -730,14 +786,21 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
-        price:"275"
+        price:"678"
     }
 ]
 
+
+
+
+//let count = 0;
+
 let parent = document.getElementById("box")
 
-function showhokproduct() {
+function showhokproduct(products) {
+    parent.innerHTML = null
     products.forEach(function(products) {
+        
 
         let div = document.createElement("div")
 
@@ -777,7 +840,9 @@ function showhokproduct() {
 
 
         addtocart_btn.onclick = function() {
-
+        for(let i = 0; i < 10; i++) {
+            count++
+        }
         addtocart(products)
 
         };
@@ -786,13 +851,14 @@ function showhokproduct() {
         parent.append(div)
     })
 }
-showhokproduct()
+showhokproduct(products)
 
 if(localStorage.getItem("hokcart") === null) {
     localStorage.setItem("hokcart" , JSON.stringify([]))
 }
 
 function addtocart(products) {
+
     let products_cart = JSON.parse(localStorage.getItem("hokcart"));
 
     products_cart.push(products)
@@ -802,6 +868,56 @@ function addtocart(products) {
 
 
 
+
+
+
+
+
+let box = document.getElementById("box")
+
+function onecol() {
+    box.setAttribute("id" , "box1")
+}
+
+function threecol() {
+    box.setAttribute("id" , "box2")
+
+}
+function fourcol() {
+    box.setAttribute("id" , "box")
+}
+
+function showfeature() {
+    let showdown = document.getElementsByClassName("showfeat")[0]
+    showdown.style.display = "flex"
+}
+let showfeat = document.getElementsByClassName("showfeat")[0]
+let shut = showfeat.querySelectorAll("button")
+showfeat.addEventListener("mouseleave" , shutup)
+
+function shutup() {
+    showfeat.style.display = "none"
+}
+
+
+function sortLH() {
+
+let arr = products.sort(function (a,b){
+
+  return a.price - b.price
+})
+showhokproduct(arr)
+};
+
+
+function sortHL() {
+
+let arr = products.sort(function (a,b){
+
+  return b.price - a.price
+})
+showhokproduct(arr)
+};
 
 </script>
 </html>
