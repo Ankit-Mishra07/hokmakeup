@@ -164,6 +164,7 @@
             padding-left: 10%;
             width:100%;
             font-size: 12px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
             display:none;
         }
         .makeup div {
@@ -180,6 +181,164 @@
             font-weight: bold;
             font-size: 14px;
         }
+        #kits_combos {
+            width:11.5%;
+            margin-left: 32.5%;
+            background-color: white;
+            line-height: 25px;
+            display:block;
+            font-size: 15px;
+            padding:10px;
+            position:absolute;
+            display:none;
+        }
+        #kits_combos p a {
+            text-decoration: none;
+        }
+        #middle{
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    h1{
+        margin: 2% 0;
+        font-size:large;
+        text-align: center;
+       text-decoration: underline;
+       font-family: 'Montserrat', sans-serif;
+    }
+    
+    .brands-button > button{
+        height: 64px;
+        background-color: white;
+        width: 17%;
+        margin: 1% 1%;
+    }
+    .img-1{
+        width: 1200px;
+        margin: 0.5% 0;
+    }
+    .hot-picks-img{
+        margin: 1% 1.5%;
+    }
+    .brands{
+        width: 22%;
+        margin: 0.5% 1%;
+    }
+    .featured-store{
+        width: 46%;
+        margin: 1% 1%;
+    }
+
+    #bottom{
+        margin: 1% 0;
+        background-color: #f7f7f7;
+    }
+    #bottom > div{
+        width: 20%;
+        margin: auto;
+        padding: 1%;
+         margin-left: 9%;
+        display: inline-block;
+        
+    }
+    #bottom > div > div {
+        display: inline-block;
+        margin-left: 5%;
+        margin-top: 6%;
+    }
+    #bottom > div > div > h2 {
+        font-family:Montserrat,sans-serif ;
+       font-size: medium;
+       margin: 6% 0;
+    }
+    #bottom > div > div > p{
+        font-family: Poppins,sans-serif;
+        font-size: small;
+        margin: 6% 0;
+    }
+    .fas , .fab{
+       color: rgb(167, 6, 6);
+       font-size: 18px ;
+    }
+
+
+    #d1 {
+            /* height: 200px; */
+            background-color: #ecf0f1;
+        }
+        #d2 {
+            /* height: 400px; */
+            background-color: #2d3436;
+            color: white;
+        }
+        /* .d2 {
+            height: 300px;
+
+        } */
+        .h2 {
+            text-align: center; 
+            margin: 20px; 
+            padding-top: 20px;
+
+        }
+        .d3 {
+            /* border: 1px solid black; */
+            /* height: 250px; */
+            width: 70%;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+        .d4 {
+            display: inline-block;
+            width: 20%;
+            /* height: 250px; */
+            /* border: 1px solid black; */
+            vertical-align:text-top;
+            line-height: 30px;
+        }
+        #subscribe {
+            width: 38%;
+        }
+        .inp1 {
+            height: 40px;
+            width: 60%;
+            border-radius: 3px;
+        }
+        .inp2 {
+            height: 40px;
+            width: 30%;
+            background-color: pink;
+            border-radius: 3px;
+
+        }
+     
+        .img100 {
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+        }
+        #last {
+            margin-left: 15%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+        }
+        #l {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+        }
+        span a {
+            text-decoration: none;
+          color:white
+        }
+        span a:hover {
+            text-decoration: underline;
+            color:#FF66B9;
+        }
+      
     </style>
 </head>
 <body>
@@ -189,7 +348,7 @@
         <div class="log_sign">
             <ul class="nav">
             <li><a href="#">Track Order</a></li>
-            <li style="font-size: 16px;"> &reg; </li>
+            <li style="font-size: 10px;"> <i style='font-size:15px' class='fas'>&#xf406;</i> </li>
             <li><a href="#">Login</a></li>
             <li>or</li>
             <li> <a href="#">Create an account</a></li>
@@ -222,11 +381,11 @@
           
            <li ><a href="#" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
           
-           <li><a href="#"> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
+           <li><a> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
           
     <div id="cart">
         <p>Your cart is currently empty</p>
-        <a href="#"><button>Continue Shopping</button></a>
+        <a href="products.html"><button>Continue Shopping</button></a>
     </div>
            
          </ul>
@@ -240,10 +399,10 @@
         <a href="#">NEW ARRIVALS</a>
         
          <a href="#" id="make_up">MAKE UP</a>
-         <a href="#">SKIN</a>
+         <a href="#" id="for_skin">SKIN</a>
          <a href="#">BRANDS</a>
-         <a href="#">KITS&COMBOS</a>
-         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 3px; padding:3px">HOT</sup></a>
+         <a href="#" id="kits&combos">KITS&COMBOS</a>
+         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
          <a href="#">TUTORIALS</a>
 
     </div>
@@ -300,124 +459,288 @@
             <p><a href="#">Face palettes</a></p>
         </div>
      </div>
-    <div id="slide"></div>
+
+     <div class="makeup">
+        <div>
+            <p><a href="#" class="color-pink">Face</a></p>
+            <p><a href="#">Cleanser</a></p>
+            <p><a href="#">cream</a></p>
+            <p><a href="#">Face mask</a></p>
+            <p><a href="#">Serum & Oil</a></p>
+            <p><a href="#">Face Wash</a></p>
+            <p><a href="#">Facial Mist</a></p>
+            <p><a href="#">Facial Wipes</a></p>
+            <p><a href="#">Gel</a></p>
+            <p><a href="#">Scrub</a></p>
+            <p><a href="#">Moisturizer</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Eyes</a></p>
+            <p><a href="#">Eye Cream</a></p>
+            <p><a href="#">Eye Patch</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Lip Care</a></p>
+            <p><a href="#">Lip Balm</a></p>
+            <p><a href="#">Petrolium Jelly</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Bath & Body</a></p>
+            <p><a href="#">Shower Gel</a></p>
+            <p><a href="#">Foot Scrub</a></p>
+            <p><a href="#">Body Oil</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Hair</a></p>
+            <p><a href="#">Hair Masque</a></p>
+            <p><a href="#">Hair Gel</a></p>
+            <p><a href="#">Shampoo</a></p>
+        </div>
+    </div>
     
+    <div id="kits_combos">
+        <p><a href="#">Combos</a></p>
+        <p><a href="#">Basic KIts</a></p>
+        <p><a href="#">Customisable Kits - </br> Basic</a></p>
+        <p><a href="#">Customisable Kits - </br> Professional</a></p>
+    </div>
+
+     <div id="slide"></div>
+
+     <div id="middle">
+        <h1>OUR TOP BRANDS</h1>
+       <div class="brands-button">
+           <button><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/160x60_PP_logo_for_Brands_-_6_September_2021_160x.jpg?v=1630908614" alt=""></button>
+
+           <button><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/160_X_60_Brand_Logos-04_160x.jpg?v=1609841765" alt=""></button>
+
+           <button><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/160_X_60_Brand_Logos-01_160x.jpg?v=1609841780" alt=""></button>
+
+           <button><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/XX_Logo_for_Brands_160x.jpg?v=1626848792" alt=""></button>
+
+           <button><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/160_X_60_Brand_Logos-03_160x.jpg?v=1609841780" alt=""></button>
+
+           <button><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/160x60_Relove_logo_for_Brands_copy_160x.jpg?v=1631517257" alt=""></button>
+
+           <button><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/Wet_n_wild_1_160x_ce432897-e258-46e0-897f-403176448355_160x.png?v=1611950533" alt=""></button>
+
+           <button><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/160_X_60_Brand_Logos-02_160x.jpg?v=1609841780" alt=""></button>
+       </div>
+
+       <div class="spotlight">
+            <h1>IN THE SPOTLIGHT</h1>
+            <a href=""><img class="img-1" src="https://cdn.shopify.com/s/files/1/1743/7443/files/xx-revolution.gif?v=1631268320" alt=""></a>
+
+            <a href=""><img class="img-1" src="https://cdn.shopify.com/s/files/1/1743/7443/files/KITS.jpg?v=1631268360" alt=""></a>
+       </div>
+
+       <div class="spotlight">
+        <h1>TOP OFFER</h1>
+        <a href=""><img class="img-1" src="https://cdn.shopify.com/s/files/1/1743/7443/files/skincare_aa8f4464-f006-45ee-8cd1-6f31da096a69.jpg?v=1631268673"
+                alt=""></a>
+    
+        <a href=""><img class="img-1" src="https://cdn.shopify.com/s/files/1/1743/7443/files/pigment_play_5d691369-2c59-461b-bc62-c5d8fcca275c.jpg?v=1631268697"
+                alt=""></a>
+       </div>
+
+       <div class="hot-picks">
+        <h1>HOT PICKS</h1>
+        <a href=""><img class="hot-picks-img"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/lipsmacker_aa6ec3a7-d19b-4be4-91c8-7162317815b5.jpg?v=1631269137"
+                alt=""></a>
+
+        <a href=""><img class="hot-picks-img"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/Makeup_obsession_82cb4167-04e0-44e8-8229-284def34d48d.jpg?v=1631269157"
+                alt=""></a>
+
+        <a href=""><img class="hot-picks-img"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/nickak_1bef0ded-f524-4104-9f16-b116693a5e72.jpg?v=1631269177"
+                alt=""></a>
+
+        <a href=""><img class="hot-picks-img"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/La_colors_8a4fde33-da34-479f-8580-7b8d942209e7.jpg?v=1631269198"
+                alt=""></a>
+
+        <a href=""><img class="hot-picks-img"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/skinrepublic_3077b858-62be-42a7-8346-0d9dc54eed21.jpg?v=1631270486"
+                alt=""></a>
+        
+        <a href=""><img class="hot-picks-img"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/la_girl_b8058a14-ca79-4e71-b952-f940fcdc3b49.jpg?v=1631270468"
+                alt=""></a>
+       </div>
+
+       <div class="featured">
+        <h1>FEATURED BRANDS</h1>
+        <a href=""><img class="brands" src="https://cdn.shopify.com/s/files/1/1743/7443/files/mur_4_566c0f1e-a806-4a6c-bd74-a3f87c23699d.jpg?v=1631270133" alt=""></a>
+
+        <a href=""><img class="brands" src="https://cdn.shopify.com/s/files/1/1743/7443/files/pf_83db15ec-eb56-40f3-8cb8-5ea8fdf25bcd.jpg?v=1631270153" alt=""></a>
+
+        <a href=""><img class="brands" src="https://cdn.shopify.com/s/files/1/1743/7443/files/Makeup_Kits_b2fc1bcf-1e0e-4816-b884-9d2cbde92f0e.jpg?v=1631270181" alt=""></a>
+
+        <a href=""><img class="brands" src="https://cdn.shopify.com/s/files/1/1743/7443/files/Oella_Oils_27b03679-1634-4cd6-b8c5-0960a6017343.jpg?v=1631270227" alt=""></a>
+
+        <a href=""><img class="brands"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/Trend_Beauty_eb4685f9-3100-46a6-a208-cc2f53b65af9.jpg?v=1631270283"
+                alt=""></a>
+        
+        <a href=""><img class="brands"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/The_Color_Workshop_copy_1.jpg?v=1631270326"
+                alt=""></a>
+        
+        <a href=""><img class="brands"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/Superdrug_462a81a2-6f7c-48df-bc54-1dbea40807d7.jpg?v=1631270344"
+                alt=""></a>
+        
+        <a href=""><img class="brands"
+                src="https://cdn.shopify.com/s/files/1/1743/7443/files/Lottie_London.jpg?v=1631270374"
+                alt=""></a>
+       </div>
+
+       <div class="stores">
+        <h1>FEATURED STORES</h1>
+
+        <a href=""><img class="featured-store" src="https://cdn.shopify.com/s/files/1/1743/7443/files/Red_lips.jpg?v=1614862286" alt=""></a>
+
+        <a href=""><img class="featured-store" src="https://cdn.shopify.com/s/files/1/1743/7443/files/Face_-_base.jpg?v=1614862373"
+                alt=""></a>
+       </div>
+
+       <div class="featured">
+        <h1>INDIA'S ONLY MAKEUP DISTRIBUTION NETWORK</h1>
+        <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/1170_X_302_7d4de0a5-4279-4dcd-8099-e6e1bc580766.jpg?v=1612012507" alt=""></a>
+       </div>
+
+    </div>
+
+    <div id="bottom">
+
+        <div>
+            <i class="fas fa-gift"></i>
+            <div>
+                <h2>GENUINE PRODUCTS</h2>
+                <P>Sourced Directly From Brands</P>
+            </div>
+            
+        </div>
+
+        <div>
+            <i class="fas fa-truck"></i>
+            <div>
+                <h2>FREE SHIPPING</h2>
+                <P>For Orders Above Rs. 600</P>
+            </div>
+        </div>
+
+        <div>
+            <i class="fab fa-cc-visa"></i>
+            <div>
+                <h2>SECURE PAYMENTS</h2>
+                <P>Using 256-bit SSL Encryption</P>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="d1">
+
+    </div>
+    <div id="d2">
+        <h2 class="h2">
+        Need help? Call our support team at +91 9810245261
+        </h2>
+        <hr style="width: 70%; margin: auto;">
+        <div class="d3">
+            <div class="d4">
+                <h3>INFORMATION</h3>
+                   <span><a href="#"> About Us </a> </span><br>
+                  <span><a href="#">  Contact Us </a> </span><br>
+                  <span><a href="#">  Return Policy</a> </span><br>
+                <span><a href="#">Terms & Conditions</a> </span><br>
+                <span><a href="#">  Careers At Hok</a> </span><br>
+                    <span><a href="#">  Frequently Ask Questions </a></span><br>
+                        <span><a href="#">  Privacy Policy</a> </span><br>
+                            <span><a href="#">  Shipping Policy</a> </span><br>
+                                <span><a href="#">Offers</a> </span><br>
+            </div>
+            <div class="d4">
+                <h3>OUR TOP CATEGORIES</h3>
+                <span><a href="#"> Eyes</a> </span><br>
+                <span><a href="#">  Face </a></span><br>
+                <span><a href="#"> Brushes </a></span><br>
+                <span><a href="#"> Kits </a> </span><br>
+                <span><a href="#"> Lips</a> </span><br>
+                <span><a href="#">  Nails </a></span><br>
+            </div>
+            <div class="d4" id="subscribe">
+                <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                Get the latest updates on new products and upcoming sales <br> <br> <br>
+                <input type="text", placeholder="E-mail" class="inp1" >
+                <a href=""> <button class="inp2">subscribe</button> </a><br> <br>
+                <div>
+                    <a href="https://www.facebook.com" target="_blank"><i style="font-size:24px; color:white; margin: 5px 10px" class="fa">&#xf230;</i></a>
+                   
+                   <a href="https://twitter.com/?lang=en-in" target="_blank"> <i style="font-size:24px; color:white; margin:5px 10px;" class="fa">&#xf099;</i> </a>
+
+                   <a href="https://www.instagram.com" target="_blank"><i style="font-size:24px; color:white; margin:5px 10px" class="fa">&#xf16d;</i></a>
+                   
+
+                </div>
+            </div>
+            <div class="d4">
+                <h3>CONTACT</h3>
+                Hok Beauty Pvt Ltd. <br>
+                A-26, Ground Floor,  <br>
+                Naraina Industrial Area <br>
+                Phase 2 New Delhi-110028br <br> <br>
+
+                +91 9810245261 <br>
+
+                Mon-Sat 10 AM to 7 PM <br><br>
+
+
+                Email:  <br>
+                support@hokmakeup.com <br>
+                
+            </div>
+        </div>
+        <div class="d3">
+            HOK MAKEUP is the easiest way to buy international makeup brands in India.  <br>
+            100% genuine products sourced directly from the brands.
+        </div>
+        
+    </div>
+    <div id="l">
+        <div id="last">
+            All rights reserved © 2018 Hok Beauty Pvt. Ltd.
+        </div>
+    </div>
+    
+
+   
+    <script src="index.js"></script>
 </body>
 
-<script>
-
-    //for search portion
-
-let Top_search = document.getElementById("Top_search")
-
-let search = document.getElementById("Top_search")
-
-let text = search.querySelectorAll("a")
-
-let search_input = document.getElementById("search_input")
-
-search_input.addEventListener("click",show)
-
-Top_search.addEventListener("mouseleave",hide)
-
-function show(e) { 
-search_input.textContent = text.textContent
-   search.style.display = "flex"
-}
-function hide() {
-    search.style.display = "none"
-}
-//end of search portion
-
-// for cart icon portion
-
-let cart_pop = document.getElementById("cart")
-let cart_icon = document.getElementById("cart_icon")
-cart_icon.addEventListener("click", pop)
-cart_pop.addEventListener("mouseleave", hiden)
-
-function pop () {
-    cart_pop.style.display = "block" 
-}
-function hiden() {
-    cart_pop.style.display = "none"
-}
-// end of cart icon
-
-//for makeup pop 
-
-let makup = document.getElementsByClassName("makeup")[0]
-
-let make_up = document.getElementById("make_up")
-
-make_up.addEventListener("mouseover" , disply)
-make_up.addEventListener("mouseleave" , hidemakeup)
-function disply(){
-    makup.style.display ="flex"
-}
-function hidemakeup() {
-    makup.style.display="none"
-}
-
-
-
-
-
-
-
-
-
-setTimeout(function(){
-    alert("Never miss a sale \nSubscribe to get updates on our new products and exclusive promotions")
-},4000)
-
-let images = [
-    "https://th.bing.com/th/id/OIP.17n6cng1dsY2Yxw6eMUIaQHaEo?w=248&h=180&c=7&r=0&o=5&pid=1.7",
-    "https://cdn.shopify.com/s/files/1/1743/7443/files/xx-revolution.gif?v=1631268320",
-    "https://www.bing.com/th?id=OIP.rH1ssomuw42FE9LrUwNBCwHaE8&w=176&h=110&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",
-    "https://www.bing.com/th?id=OIP.grhNDUkImMmGd28tsWb30AHaE8&w=131&h=88&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
-]
-
-
-  
-
-    let container = document.getElementById("slide")
-
-    let img1 = document.createElement("img")
-    img1.setAttribute("class" , "image")
-    img1.src = images[images.length-1]
-    container.append(img1)
-
-    let interval;
-
-    function startslideshow() {
-
-        let count = 0;
-
-        interval = setInterval(function(){
-
-            container.innerHTML = null;
-
-            if(count == images.length) {
-                count = 0;
-            } 
-
-            let img = document.createElement("img") 
-            img.setAttribute("class" , "image")
-            img.src= images[count]
-
-            container.append(img)
-            count++
-
-        },2000)
-
-    }
-
-    startslideshow()
-
-
-
-
-
-</script>
 </html>
