@@ -142,3 +142,92 @@
         }
     
         startslideshow()
+
+
+          //login start
+
+    let loginn = document.getElementById("loginn")
+    let clicklog = document.getElementById("clicklog")
+    let cut = document.getElementById("cut")
+
+    clicklog.addEventListener("click" , showlogin)
+   function showlogin () {
+       loginn.style.display = "block"
+   }
+
+   cut.addEventListener("click" , hiddlogin)
+
+   function hiddlogin() {
+       loginn.style.display = "none"
+   }
+
+
+   let flag = false;
+
+   function loggin(event) {
+        event.preventDefault()
+
+
+
+        let email = document.getElementById("email")
+        let password = document.getElementById("password")
+
+        let all_users = JSON.parse(localStorage.getItem("hok_users"))
+
+
+        all_users.forEach(function(user){
+
+            if(email.value == user.email && password.value == user.password) {
+
+                email.value = ""
+                    password.value = ""
+                setTimeout(function(){
+                   
+                    window.location.href = "index.html"
+                },2000)
+                
+            }else {
+            flag = true
+            return
+            }
+
+        })
+
+      
+      
+    }
+
+    if(flag == true) {
+            alert("Invalid Credentials")
+        }
+
+    
+
+    //login end
+
+    //chat box start 
+
+    let selectchatbtn = document.getElementById("chatshowbtn")
+    selectchatbtn.addEventListener("click" , chat_dikhao)
+
+    let dikhana = document.getElementById("chatwith_ankit")
+
+
+    function chat_dikhao() {
+        dikhana.style.display = "block"
+    }
+
+    function htta() {
+        dikhana.style.display = "none"
+    }
+
+
+    function dikhaobar() {
+        let sidebar = document.getElementById("side-bar")
+        sidebar.style.display = "block"
+    }
+
+    function htaobar() {
+        let sidebar = document.getElementById("side-bar")
+        sidebar.style.display = "none"
+    }
