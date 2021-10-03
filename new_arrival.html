@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW ARRIVALS</title>
+    <title>NEW ARRIVALS - Hok Makeup</title>
+    <link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
@@ -420,6 +421,33 @@ html {
         }
 
         /* footer */
+        
+        /* login */
+        #loginn {
+            margin-left:70%;
+            background-color: white;
+            position: absolute;
+            width:20%;
+            padding:15px 20px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+            display: none;
+        }
+        #myform {
+            text-align: center;background-color: white;width:100%; padding:10px;border-radius: 3px;font-size: 16px;
+        }
+        #myform:hover {
+            background-color:rgb(80, 65, 65);
+            color:rgb(252, 29, 29);
+        }
+        #account{
+            background-color:rgb(80, 65, 65);
+            color:rgb(252, 29, 29);
+            width:100%;
+            padding:10px;
+            border-radius: 4px;
+        }
+
+        /* login */
     </style>
 </head>
 <body>
@@ -427,14 +455,47 @@ html {
         <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
         <div class="log_sign">
             <ul class="nav">
-            <li><a href="#">Track Order</a></li>
+            <li><a href="track.html">Track Order</a></li>
             <li style="font-size: 10px;"> <i style='font-size:15px' class='fas'>&#xf406;</i> </li>
-            <li><a href="#">Login</a></li>
+            <li id="clicklog">Login</li>
             <li>or</li>
-            <li> <a href="#">Create an account</a></li>
+            <li> <a href="account.html">Create an account</a></li>
         </ul>
         </div>
     </div>
+
+
+     <!-- login -->
+ 
+     <div id="loginn">
+        <p style="text-decoration: underline; font-weight: bold;display:inline-block">CUSTOMER LOGIN</p>
+        <button style="background-color: white;font-weight: bold;border-color: white;margin-left: 30%;" id="cut">X</button> <br>
+        <hr>
+        <p style="margin-top: 20px;">If you are already registered, please log in.</p> <br>
+       
+        <lable style="font-weight: bold;font-size: 12px;" >Email<sup style="color:red">*</sup></lable> <br> <br>
+        <input type="email" placeholder="Email" style="width:100%;padding:10px;border-radius: 3px;" id="email"><br> <br>
+       
+        <lable style="font-weight: bold;font-size: 12px;">Password<sup style="color:red">*</sup></lable> <br> <br>
+        <input type="password" placeholder="Password" style="width:100%;padding:10px;border-radius: 3px;" id="password"><br> <br>
+       
+        <p>Forgot your password?</p> <br>
+        
+        <button id="myform" onclick="loggin(event)">LOGIN</button>
+        
+        <br> <br>
+
+        <div style="background-color: #F7F7F7;width:100%">
+
+            <p>Create your account and enjoy a new shopping experience.</p> <br>
+
+            <a href="account.html"><button id="account">CREATE A NEW ACCOUNT</button></a> <br>
+
+        </div>
+        
+
+</div>
+   <!-- login end -->
    
    
     <div class="logo_search">
@@ -450,7 +511,7 @@ html {
                 <a href="#"><button class="search_btn"><i class="fas fa-search" ></button></i></a>
                 <div id="Top_search" class="hide_search">
                     <p>TRENDING</p>
-                    <a href="#">New arrival</a>
+                    <a href="new_arrival.html">New arrival</a>
                     <a href="#">Makeup Kit</a>
                     <a href="#">Make Revolution</a>
                     <a href="#">Milani</a>
@@ -476,13 +537,13 @@ html {
 
     <div class="navlist">
 
-        <a href="#">NEW ARRIVALS</a>
+        <a href="new_arrival.html">NEW ARRIVALS</a>
         
          <a href="#" id="make_up">MAKE UP</a>
          <a href="#" id="for_skin">SKIN</a>
-         <a href="#">BRANDS</a>
+         <a href="brands.html">BRANDS</a>
          <a href="#" id="kits&combos">KITS&COMBOS</a>
-         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
+         <a href="offers.html">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
          <a href="#">TUTORIALS</a>
 
     </div>
@@ -1140,6 +1201,69 @@ let arr = products.sort(function (a,b){
 })
 showhokproduct(arr)
 };
+
+
+//login start
+
+let loginn = document.getElementById("loginn")
+    let clicklog = document.getElementById("clicklog")
+    let cut = document.getElementById("cut")
+
+    clicklog.addEventListener("click" , showlogin)
+   function showlogin () {
+       loginn.style.display = "block"
+   }
+
+   cut.addEventListener("click" , hiddlogin)
+
+   function hiddlogin() {
+       loginn.style.display = "none"
+   }
+
+
+   let flag = false;
+
+   function loggin(event) {
+        event.preventDefault()
+
+
+
+        let email = document.getElementById("email")
+        let password = document.getElementById("password")
+
+        let all_users = JSON.parse(localStorage.getItem("hok_users"))
+
+
+        all_users.forEach(function(user){
+
+            if(email.value == user.email && password.value == user.password) {
+
+                email.value = ""
+                    password.value = ""
+                setTimeout(function(){
+                   
+                    window.location.href = "index.html"
+                },2000)
+                
+            }else {
+            flag = true
+            return
+            }
+
+        })
+
+      
+      
+    }
+
+    if(flag == true) {
+            alert("Invalid Credentials")
+        }
+
+    
+
+    //login end
+
 
 </script>
 </html>

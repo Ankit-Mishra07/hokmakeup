@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Products - Hok Makeup</title>
+    <link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
@@ -254,7 +255,7 @@ html {
             grid-gap: 1.5%;
             margin-left: 3%;
         }
-
+      
         .margin {
             color: #a1a2a5;
             font-weight: bold;
@@ -282,6 +283,18 @@ html {
             box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
         }
         .cartbtn:hover {
+            background-color: #FF66B9;
+            color:white;
+        }
+        .mywish {
+            margin-left: 70px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: white;
+            border:1px solid #FF66B9;
+            padding:5px;
+        }
+        .mywish:hover {
             background-color: #FF66B9;
             color:white;
         }
@@ -328,7 +341,114 @@ html {
        .showfeat button {
            width:100%;
        }
-      
+
+
+       /* footer */
+       #d1 {
+            /* height: 200px; */
+            background-color: #ecf0f1;
+        }
+        #d2 {
+            /* height: 400px; */
+            background-color: #2d3436;
+            color: white;
+        }
+        /* .d2 {
+            height: 300px;
+
+        } */
+        .h2 {
+            text-align: center; 
+            margin: 20px; 
+            padding-top: 20px;
+
+        }
+        .d3 {
+            /* border: 1px solid black; */
+            /* height: 250px; */
+            width: 70%;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+        .d4 {
+            display: inline-block;
+            width: 20%;
+            /* height: 250px; */
+            /* border: 1px solid black; */
+            vertical-align:text-top;
+            line-height: 30px;
+        }
+        #subscribe {
+            width: 38%;
+        }
+        .inp1 {
+            height: 40px;
+            width: 60%;
+            border-radius: 3px;
+        }
+        .inp2 {
+            height: 40px;
+            width: 30%;
+            background-color: pink;
+            border-radius: 3px;
+
+        }
+     
+        .img100 {
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+        }
+        #last {
+            margin-left: 15%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+        }
+        #l {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+        }
+        span a {
+            text-decoration: none;
+          color:white
+        }
+        span a:hover {
+            text-decoration: underline;
+            color:#FF66B9;
+        }
+
+        /* footer */
+
+        
+        /* login */
+        #loginn {
+            margin-left:70%;
+            background-color: white;
+            position: absolute;
+            width:20%;
+            padding:15px 20px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+            display: none;
+        }
+        #myform {
+            text-align: center;background-color: white;width:100%; padding:10px;border-radius: 3px;font-size: 16px;
+        }
+        #myform:hover {
+            background-color:rgb(80, 65, 65);
+            color:rgb(252, 29, 29);
+        }
+        #account{
+            background-color:rgb(80, 65, 65);
+            color:rgb(252, 29, 29);
+            width:100%;
+            padding:10px;
+            border-radius: 4px;
+        }
+
+        /* login */
     </style>
 </head>
 <body>
@@ -336,14 +456,47 @@ html {
         <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
         <div class="log_sign">
             <ul class="nav">
-            <li><a href="#">Track Order</a></li>
+            <li><a href="track.html">Track Order</a></li>
             <li style="font-size: 10px;"> <i style='font-size:15px' class='fas'>&#xf406;</i> </li>
-            <li><a href="#">Login</a></li>
+            <li id="clicklog">Login</li>
             <li>or</li>
-            <li> <a href="#">Create an account</a></li>
+            <li> <a href="account.html">Create an account</a></li>
         </ul>
         </div>
     </div>
+
+      
+    <!-- login -->
+ 
+    <div id="loginn">
+        <p style="text-decoration: underline; font-weight: bold;display:inline-block">CUSTOMER LOGIN</p>
+        <button style="background-color: white;font-weight: bold;border-color: white;margin-left: 30%;" id="cut">X</button> <br>
+        <hr>
+        <p style="margin-top: 20px;">If you are already registered, please log in.</p> <br>
+       
+        <lable style="font-weight: bold;font-size: 12px;" >Email<sup style="color:red">*</sup></lable> <br> <br>
+        <input type="email" placeholder="Email" style="width:100%;padding:10px;border-radius: 3px;" id="email"><br> <br>
+       
+        <lable style="font-weight: bold;font-size: 12px;">Password<sup style="color:red">*</sup></lable> <br> <br>
+        <input type="password" placeholder="Password" style="width:100%;padding:10px;border-radius: 3px;" id="password"><br> <br>
+       
+        <p>Forgot your password?</p> <br>
+        
+        <button id="myform" onclick="loggin(event)">LOGIN</button>
+        
+        <br> <br>
+
+        <div style="background-color: #F7F7F7;width:100%">
+
+            <p>Create your account and enjoy a new shopping experience.</p> <br>
+
+            <a href="account.html"><button id="account">CREATE A NEW ACCOUNT</button></a> <br>
+
+        </div>
+        
+
+</div>
+   <!-- login end -->
    
    
     <div class="logo_search">
@@ -368,7 +521,7 @@ html {
            
            </li>
           
-           <li ><a href="#" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
+           <li ><a href="hokwish.html" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
           
            <li><a href="#"> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
           
@@ -385,13 +538,13 @@ html {
 
     <div class="navlist">
 
-        <a href="#">NEW ARRIVALS</a>
+        <a href="new_arrival.html">NEW ARRIVALS</a>
         
          <a href="#" id="make_up">MAKE UP</a>
          <a href="#" id="for_skin">SKIN</a>
-         <a href="#">BRANDS</a>
+         <a href="brands.html">BRANDS</a>
          <a href="#" id="kits&combos">KITS&COMBOS</a>
-         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
+         <a href="offers.html">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
          <a href="#">TUTORIALS</a>
 
     </div>
@@ -527,7 +680,7 @@ html {
         <div>
             <div><h4>CATEGORY</h4></div>
             <input type="checkbox" id="eyes">
-            <lable>Eyes</lable> <br>
+            <a href="eyes.html" style="color:black"><lable>Eyes</lable></a> <br>
             <input type="checkbox" id="lips">
             <lable>Lips</lable>
         </div>
@@ -536,14 +689,14 @@ html {
             <input type="checkbox" id="Beauty-creations">
             <lable>Beauty Creation</lable> <br>
             <input type="checkbox" id="Hok-Makeup">
-            <lable>Hok Makeup</lable> <br>
+            <a href="eyes.html" style="color:black"><lable>Hok Makeup</lable></a> <br>
             <input type="checkbox" id="Revolution Beauty">
             <lable>Revolution Beauty</lable>
         </div>
         <div>
             <div><h4>PRICE</h4></div>
             <input type="checkbox" id="0-499">
-            <lable>Rs.0 - Rs.499</lable> <br>
+            <a href="eyes.html" style="color:black"><lable>Rs.0 - Rs.499</lable></a> <br>
             <input type="checkbox" id="500-999">
             <lable>Rs.500 - Rs.999</lable> <br>
             <input type="checkbox" id="1000-1999">
@@ -552,7 +705,7 @@ html {
         <div>
             <div><h4>DISCOUNT</h4></div>
             <input type="checkbox" id="15%">
-            <lable>Upto 15%</lable> <br>
+            <a href="eyes.html" style="color:black"><lable>Upto 15%</lable></a> <br>
             <input type="checkbox" id="30-50%">
             <lable>30% - 50%</lable> <br>
             <input type="checkbox" id="50%">
@@ -560,9 +713,89 @@ html {
         </div>
      </div>
      
-        <div id="box"></div>
+        <div id="box"></div> 
 
     </div>
+
+<br><br> <br><br><br><br><br><br>
+    <!-- footer -->
+    
+
+    <div id="d1">
+
+    </div>
+    <div id="d2">
+        <h2 class="h2">
+        Need help? Call our support team at +91 9810245261
+        </h2>
+        <hr style="width: 70%; margin: auto;">
+        <div class="d3">
+            <div class="d4">
+                <h3>INFORMATION</h3>
+                   <span><a href="#"> About Us </a> </span><br>
+                  <span><a href="#">  Contact Us </a> </span><br>
+                  <span><a href="#">  Return Policy</a> </span><br>
+                <span><a href="#">Terms & Conditions</a> </span><br>
+                <span><a href="#">  Careers At Hok</a> </span><br>
+                    <span><a href="#">  Frequently Ask Questions </a></span><br>
+                        <span><a href="#">  Privacy Policy</a> </span><br>
+                            <span><a href="#">  Shipping Policy</a> </span><br>
+                                <span><a href="#">Offers</a> </span><br>
+            </div>
+            <div class="d4">
+                <h3>OUR TOP CATEGORIES</h3>
+                <span><a href="#"> Eyes</a> </span><br>
+                <span><a href="#">  Face </a></span><br>
+                <span><a href="#"> Brushes </a></span><br>
+                <span><a href="#"> Kits </a> </span><br>
+                <span><a href="#"> Lips</a> </span><br>
+                <span><a href="#">  Nails </a></span><br>
+            </div>
+            <div class="d4" id="subscribe">
+                <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                Get the latest updates on new products and upcoming sales <br> <br> <br>
+                <input type="text", placeholder="E-mail" class="inp1" >
+                <a href=""> <button class="inp2">subscribe</button> </a><br> <br>
+                <div>
+                    <a href="https://www.facebook.com" target="_blank"><i style="font-size:24px; color:white; margin: 5px 10px" class="fa">&#xf230;</i></a>
+                   
+                   <a href="https://twitter.com/?lang=en-in" target="_blank"> <i style="font-size:24px; color:white; margin:5px 10px;" class="fa">&#xf099;</i> </a>
+
+                   <a href="https://www.instagram.com" target="_blank"><i style="font-size:24px; color:white; margin:5px 10px" class="fa">&#xf16d;</i></a>
+                   
+
+                </div>
+            </div>
+            <div class="d4">
+                <h3>CONTACT</h3>
+                Hok Beauty Pvt Ltd. <br>
+                A-26, Ground Floor,  <br>
+                Naraina Industrial Area <br>
+                Phase 2 New Delhi-110028br <br> <br>
+
+                +91 9810245261 <br>
+
+                Mon-Sat 10 AM to 7 PM <br><br>
+
+
+                Email:  <br>
+                support@hokmakeup.com <br>
+                
+            </div>
+        </div>
+        <div class="d3">
+            HOK MAKEUP is the easiest way to buy international makeup brands in India.  <br>
+            100% genuine products sourced directly from the brands.
+        </div>
+        
+    </div>
+    <div id="l">
+        <div id="last">
+            All rights reserved © 2018 Hok Beauty Pvt. Ltd.
+        </div>
+    </div>
+
+    <!-- footer end -->
 </body>
 
 <script>
@@ -682,7 +915,7 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "650",
-        price:"200"
+        price:"220"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Combo2_2_270x270.jpg?v=1630136471",
@@ -706,7 +939,7 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
-        price:"275"
+        price:"205"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/trrg_dab87991-7380-411b-9b00-f19f08e2e7ee_270x270.jpg?v=1630136456",
@@ -714,7 +947,7 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
-        price:"275"
+        price:"270"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations3_1_3fb56160-e757-425a-8a22-8a0c6e1ef40e_270x270.jpg?v=1630136605",
@@ -722,7 +955,7 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
-        price:"275"
+        price:"175"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Bae_270x270.jpg?v=1630136605",
@@ -738,7 +971,7 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
-        price:"275"
+        price:"975"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations1_1_8f64da04-9f3a-4642-826b-d125434122ed_270x270.jpg?v=1630136620",
@@ -746,7 +979,7 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
-        price:"275"
+        price:"175"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/trrg_dab87991-7380-411b-9b00-f19f08e2e7ee_270x270.jpg?v=1630136456",
@@ -754,7 +987,7 @@ let products = [
         brand: "Hok Makeup",
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
-        price:"275"
+        price:"295"
     },
     {
         img:"https://cdn.shopify.com/s/files/1/1743/7443/products/beauty-creations-mini-pro-palette-vol-1_ab1af620-e2ad-4589-b6a0-a685cb5afb7c_270x270.jpg?v=1630138241",
@@ -787,7 +1020,40 @@ let products = [
         name:"10 Color Eyeshadow Palette Cool(CLR)",
         margin: "750",
         price:"678"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-icon-eye-shadow-palette-smoked-1_e7f487b8-a5f3-4cc7-bbd3-352a089e9787_270x270.jpg?v=1630136485",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/absolute-new-york-lip-mousse-lavish_0a4f6055-416e-455f-9917-7b92a3efac5d_270x270.jpg?v=1630136473",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations1_1_0b8633db-de58-41da-ad8e-a40325250520_270x270.jpg?v=1630136628",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations3_1_fcc65a11-0959-43e9-a505-e0fe47067bb7_270x270.jpg?v=1630136623",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/ESO904_270x270.jpg?v=1630136693",
+        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/Probrowkit-01_270x270.jpg?v=1630136687",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"678"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations1_1_0b8633db-de58-41da-ad8e-a40325250520_270x270.jpg?v=1630136628",
+        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations3_1_fcc65a11-0959-43e9-a505-e0fe47067bb7_270x270.jpg?v=1630136623",
+        brand: "Hok Makeup",
+        name:"10 Color Eyeshadow Palette Cool(CLR)",
+        margin: "750",
+        price:"275"
     }
+    
 ]
 
 
@@ -833,6 +1099,16 @@ function showhokproduct(products) {
         price.setAttribute("class" , "price")
         price.textContent =  "₹" + " " +products.price
 
+        let wish = document.createElement("button")
+        wish.innerText = "♡"
+        wish.setAttribute("class" , "mywish")
+
+        wish.onclick = function() {
+      
+      addtowishlist(products)
+
+      };
+
 
         let addtocart_btn = document.createElement("button")
         addtocart_btn.setAttribute("class" , "cartbtn")
@@ -840,14 +1116,12 @@ function showhokproduct(products) {
 
 
         addtocart_btn.onclick = function() {
-        for(let i = 0; i < 10; i++) {
-            count++
-        }
+      
         addtocart(products)
 
         };
 
-        div.append(img,brand,name,margin,price,addtocart_btn)
+        div.append(img,brand,name,margin,price,wish,addtocart_btn)
         parent.append(div)
     })
 }
@@ -864,6 +1138,16 @@ function addtocart(products) {
     products_cart.push(products)
 
     localStorage.setItem("hokcart" , JSON.stringify(products_cart))
+}
+
+if(localStorage.getItem("hokwish") === null) {
+    localStorage.setItem("hokwish" , JSON.stringify([]))
+}
+
+function addtowishlist(products) {
+    let product_wish = JSON.parse(localStorage.getItem("hokwish"));
+    product_wish.push(products)
+    localStorage.setItem("hokwish",JSON.stringify(product_wish))
 }
 
 
@@ -919,5 +1203,69 @@ let arr = products.sort(function (a,b){
 showhokproduct(arr)
 };
 
+
+
+
+
+    //login start
+
+    let loginn = document.getElementById("loginn")
+    let clicklog = document.getElementById("clicklog")
+    let cut = document.getElementById("cut")
+
+    clicklog.addEventListener("click" , showlogin)
+   function showlogin () {
+       loginn.style.display = "block"
+   }
+
+   cut.addEventListener("click" , hiddlogin)
+
+   function hiddlogin() {
+       loginn.style.display = "none"
+   }
+
+
+   let flag = false;
+
+   function loggin(event) {
+        event.preventDefault()
+
+
+
+        let email = document.getElementById("email")
+        let password = document.getElementById("password")
+
+        let all_users = JSON.parse(localStorage.getItem("hok_users"))
+
+
+        all_users.forEach(function(user){
+
+            if(email.value == user.email && password.value == user.password) {
+
+                email.value = ""
+                    password.value = ""
+                setTimeout(function(){
+                   
+                    window.location.href = "index.html"
+                },2000)
+                
+            }else {
+            flag = true
+            return
+            }
+
+        })
+
+      
+      
+    }
+
+    if(flag == true) {
+            alert("Invalid Credentials")
+        }
+
+    
+
+    //login end
 </script>
 </html>

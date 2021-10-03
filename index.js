@@ -43,7 +43,7 @@
     let make_up = document.getElementById("make_up")
     
     make_up.addEventListener("mouseover" , disply)
-    make_up.addEventListener("mouseleave" , hidemakeup)
+    make_up.addEventListener("click" , hidemakeup)
     function disply(){
         makup.style.display ="flex"
     }
@@ -60,7 +60,7 @@
     let for_skin = document.getElementById("for_skin")
     
     for_skin.addEventListener("mouseover" , disply2)
-    for_skin.addEventListener("mouseleave" , hideskin)
+    for_skin.addEventListener("click" , hideskin)
     function disply2(){
         skin.style.display ="flex"
     }

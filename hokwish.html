@@ -9,10 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Your Shopping Cart - Hok Makeup</title>
+    <title>Wishlist - Hok Makeup</title>
     <link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
     <style>
-        
+                
 html {
         scroll-behavior: smooth;
         
@@ -211,81 +211,41 @@ html {
         }
 
 
-        #parent {
+
+        .imgwish {
             width:80%;
-            margin: auto;
-            display:grid;
-            grid-template-columns: 65% 30%;
-            grid-gap:3%;
+            height:100px;
         }
-        .PRODUCT {
-            background-color: #F7F7F7;
-            padding: 15px 20px;
-        }
-        .order_summary {
-            background-color: #F7F7F7;
-            padding:15px 20px;
-            text-align:center;
-        }
-        #show_cart{
-            display:flex;
-            flex-wrap: wrap;
-            margin-top:30px;
-        }
-
-
-        .image {
-            height:50%;
-            width:50%;
-        }
-        .qty {
-            margin-top:9%;
-            font-weight: bold;
-            font-size: 13px;
-        }
-        .brand {
-            color:#a1a2a5;
-            font-size: 14px;
-            margin-top:10%;
-        }
-        .price {
-            font-weight: bold;
-            margin-top: 4%;
-        }
-        .name {
+       
+        .wishname {
             font-weight: bold;
             font-size: 12px;
+            margin:5px;
+
+        }
+        .rmbtn {
+            background-color:white;
+            width:80%;
+            padding:10px;
+            font-size: 16px;
+        }
+        .rmbtn:hover {
+            background-color: #383E47;
+            color:rgb(235, 32, 66);
+
+        }
+        .wishtocart {
+            background-color: #383E47;
+            color:rgb(235, 32, 66);
+            width:60%;
+            padding:10px;
+            font-size: 16px;
         }
 
-        .div3 {
-            display:flex;
-        }
-        .inpt {
-            margin-left: 60%;
-            width:90px;
-            padding:10px;
-            
-        }
-        .update_btn {
-            padding:10px;
-            width:170px;
-            margin-left: 10px;
-        }
-        .remove_btn {
-            padding:10px;
-            width:170px;
-            margin-left: 10px;
-        }
-        .note {
-            margin-top: 20px;
-             width: 100%; height:120px; padding:10px;
-        }
-        .check_out {
-            margin-top: 20px; background-color: #FF66B9;color:white;padding:10px;width: 100%;border-radius: 3px;
-        }
 
-          /* login */
-          #loginn {
+
+         /* login */
+         #loginn {
             margin-left:70%;
             background-color: white;
             position: absolute;
@@ -314,7 +274,8 @@ html {
     </style>
 </head>
 <body>
-    
+
+        
 
     <div class="topbar">
         <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
@@ -328,7 +289,8 @@ html {
         </ul>
         </div>
     </div>
-   
+
+    
     <!-- login -->
  
     <div id="loginn">
@@ -360,6 +322,8 @@ html {
 
 </div>
    <!-- login end -->
+
+   
    
     <div class="logo_search">
 
@@ -374,7 +338,7 @@ html {
                 <a href="#"><button class="search_btn"><i class="fas fa-search" ></button></i></a>
                 <div id="Top_search" class="hide_search">
                     <p>TRENDING</p>
-                    <a href="#">New arrival</a>
+                    <a href="new_arrival.html">New arrival</a>
                     <a href="#">Makeup Kit</a>
                     <a href="#">Make Revolution</a>
                     <a href="#">Milani</a>
@@ -400,13 +364,13 @@ html {
 
     <div class="navlist">
 
-        <a href="#">NEW ARRIVALS</a>
+        <a href="new_arrival.html">NEW ARRIVALS</a>
         
          <a href="#" id="make_up">MAKE UP</a>
          <a href="#" id="for_skin">SKIN</a>
-         <a href="#">BRANDS</a>
+         <a href="brands.html">BRANDS</a>
          <a href="#" id="kits&combos">KITS&COMBOS</a>
-         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
+         <a href="offers.html">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
          <a href="#">TUTORIALS</a>
 
     </div>
@@ -514,176 +478,220 @@ html {
          <p style="display: inline-block;"><a href="index.html">Home</a></p>
          <p style="display: inline-block; margin:0px 10px">  > </p>
          <p style="display: inline-block;"><a href="hokcart.html">Shopping Cart</a></p> <br>
-         <h2 style="margin-top: 20px; display: inline-block;">SHOPPING CART</h2>
-         <p style="display: inline; margin-left: 850px;"><a href="products.html">Continue shopping &nbsp;&nbsp;&nbsp;> </a></p>
+         <h2 style="margin-top: 20px; display: inline-block;">WISHLIST</h2>
+         
      </div>
 
-     <div id="parent">
+     <table style="width:80%;margin: auto;" id="mytable">
+         <thead>
+             <th>
+                 <tr style="background-color: #F7F7F7; height:40px; font-weight: bold;text-align: center;">
+                     <td style="width:15%">IMAGE</td>
+                     <td style="width:30%">PRODUCT NAME</td>
+                     <td >UNIT PRICE</td>
+                     <td>REMOVE</td>
+                     <td>ADD TO CART</td>
+                 </tr>
+             </th>
+         </thead>
 
-        <div>
-            <div class="PRODUCT">
-                <p>PRODUCT</p>
-            </div>
-            <div id="cart_product">
-        
-            </div>
-
-            <p style="margin-top: 30px;font-weight: lighter;">Due To The Current Scenario And Restrictions On E-Commerce, We Are Only Accepting Prepaid Orders For The Time Being</p>
-        </div>
-        
-        
-        <div id="orders">
-            <div class="order_summary">
-                <p>ORDER SUMMARY</p>
-            </div>
-            <div style="display:flex; justify-content: space-between; padding:20px 0px;">
-                <p style="font-weight: bold; font-size: 16px;">Total :</p>
-                <p id="total_price" style="font-weight: bold; font-size: 20px;"></p>
-            </div>
-            <br>
-            <hr>
-            <div style="margin-top:20px">
-                <button style="color:white; background-color: rgb(64, 214, 64); padding:2px 5px;font-weight: bold;display: inline-block;">Note</button>
-                <p style="font-weight: bold;display: inline-block;">&nbsp;&nbsp; Add a note to your order</p>
-                <input type="text" class="note">
-                <a href="checkout.html"><button class="check_out">PROCEED TO CHECKOUT</button></a>
-
-                <p style="margin-top: 30px; font-weight: lighter; font-style: italic;text-align: center;"><i style='font-size:15px' class='fas'>&#xf406;</i> &nbsp;&nbsp;&nbsp; We commit to protect your privacy. Your information is secure.</p>
-               
-                <p style="margin-top: 30px; font-weight: lighter;text-align: center;">Need Help? Contact us or Get in touch +91 9810245261</p>
-                <br>
-                <div style="background-color:#eef0f5;padding: 10px;text-align: center;font-weight: lighter;">GET SHIPPING ESTIMATES</div>
-
-                <form style="width:100%;margin-top: 40px;" id="frm">
-                    <label style="font-size: 14px; font-weight: bold;">Country</label> <br>
-                    <select style="width:100%; text-align: left; padding: 10px;">
-                        <option>India</option>
-                        <option value="" disabled>--</option>
-                        <option>Afganistan</option>
-                        <option>Australia</option>
-                        <option>England</option>
-                        <option>China</option>
-                        <option>Japan</option>
-                    </select> <br> <br>
-                    <lable style="font-size: 14px; font-weight: bold;">State</lable><br>
-                    <select style="width:100%; text-align: left;padding: 10px;">
-                        <option>Uttar Pradesh</option>
-                        <option>Chhattisgarh</option>
-                        <option>Goa</option>
-                        <option>Maharastra</option>
-                        <option>Uttarakhand</option>
-                        <option>Delhi</option>
-                    </select> <br><br>
-                    <label style="font-size: 14px; font-weight: bold;">Postel/Zip Code</label> <br>
-                    <input type="number" style="width:100%; text-align: left;padding: 10px;"> <br> <br>
-                    <button onclick="showship(event)" style="width:100%;border-radius: 4px; padding: 10px; background-color: #383E47;color:rgb(235, 95, 95);font-size: 16px;">CALCULATE SHIPPING</button>
-                    <p id="mycalcu" style="margin-top: 30px;font-weight: lighter;"></p>
-                </form>
-
-            </div>
-        </div>
-
-     </div>
-
-
-
-
+     </table>
+    
 </body>
 
+
+
+
+
 <script>
-    let sum = 0;
-    let cart = JSON.parse(localStorage.getItem("hokcart"))
-    let parent = document.getElementById("cart_product")
-    function showhokproduct() {
+    let wish = JSON.parse(localStorage.getItem("hokwish"))
 
-    cart.forEach(function(products) {
-    
-        let maindiv = document.createElement("div")
-        maindiv.setAttribute("id" , "show_cart")
+    let parent = document.getElementById("mytable")
 
-        let div1 = document.createElement("div")
-        let div2 = document.createElement("div")
-        let div3 = document.createElement("div")
-        div3.setAttribute("class" , "div3")
+    function showhokwishproduct() {
 
-        let img = document.createElement("img")
-        img.src = products.img
-        img.setAttribute("class" , "image")
+        wish.forEach(function(products){
+            let tr = document.createElement("tr")
+            tr.style.textAlign = "center"
+            
 
-        let brand = document.createElement("p")
-       brand.setAttribute("class", "brand")
-        brand.textContent = products.brand
+            let imgwish = document.createElement("img")
+            imgwish.setAttribute("class" , "imgwish")
+            imgwish.src = products.img
 
-        let name = document.createElement("p")
-       name.setAttribute("class" , "name")
-        name.textContent = products.name
+            let td1 = document.createElement("td")
+            td1.append(imgwish)
 
+            let p1 = document.createElement("p")
+            p1.textContent = products.brand
+            p1.style.color = "grey"
+            p1.style.fontSize = "14px"
+
+            
+
+            let p2 = document.createElement("p")
+            p2.style.fontWeight = "bold"
+            p2.style.fontSize = "12px"
+            p2.textContent = products.name
+            
+            let td2 = document.createElement("td")
+            td2.style.textAlign = "left"
+            td2.append(p1,p2)
+        
+
+            let td3 = document.createElement("td")
+            td3.style.fontWeight = "bold"
+            td3.textContent =  "₹" + " " + products.price
+
+            let rmbtn = document.createElement("button")
+            rmbtn.setAttribute("class" , "rmbtn")
+            rmbtn.innerText = "x REMOVE"
+
+            rmbtn.onclick = function() {
+                removeproduct(products)
+            };
+
+            let td4 = document.createElement("td")
+            td4.append(rmbtn)
+            td4.addEventListener("click" , markdelete)
+
+            
+
+            let cartbtnn = document.createElement("button")
+            cartbtnn.setAttribute("class" , "wishtocart")
+            cartbtnn.innerHTML = "ADD TO CART"
+
+            
+        cartbtnn.onclick = function() {
       
+      addtocart(products)
 
-        let price = document.createElement("p")
-        price.setAttribute("class" , "price")
-        price.textContent =  "₹" + " " +products.price
+      };
 
-        sum = sum + Number(products.price)
+            let td5 = document.createElement("td")
+            td5.append(cartbtnn)
 
-        let quantity = document.createElement("p")
-        quantity.setAttribute("class","qty")
-        quantity.textContent = "Quantity : "
+            tr.append(td1,td2,td3,td4,td5)
+            parent.append(tr)
 
-        let inpt = document.createElement("input")
-        inpt.type = "number"
-        inpt.setAttribute("class" , "inpt")
+        })
+    }
+    showhokwishproduct()
 
-        let update = document.createElement("button")
-        update.setAttribute("class" , "update_btn")
-        update.innerText = "UPDATE"
+    function addtocart(products) {
 
-        let remov = document.createElement("button")
-        remov.setAttribute("class", "remove_btn")
-        remov.innerText = "REMOVE"
-        remov.addEventListener("click",markdelete)
+let products_cart = JSON.parse(localStorage.getItem("hokcart"));
 
-        // remov.onclick = function() {
-        //     markdelete()
-        //     sum = sum - Number(products.price)
-        // }
+products_cart.push(products)
 
-        div1.append(img)
-        div2.append(name,brand,price,quantity)
-        div3.append(inpt,update,remov)
-
-
-        maindiv.append(div1,div2,div3)
-        parent.append(maindiv)
-    })
-}
-showhokproduct()
-
-let total = document.createElement("p")
-total.textContent = "₹" + " "+ sum + ".00"
-
-let total_price = document.getElementById("total_price")
-total_price.append(total)
-
-
-function showship(event) {
-        event.preventDefault();
-    let pt = document.getElementById("mycalcu")
-    pt.innerText="There is one shipping rate available for 490020, Chhattisgarh, India.\nFree Shipping at ₹ 0.00"
-
+localStorage.setItem("hokcart" , JSON.stringify(products_cart))
 }
 
+// function removeproduct(products) {
+//     let arr = JSON.parse(localStorage.getItem("hokwish"));
+//    let index =  arr.indexOf(products)
+//     arr.splice(index,index)
+//     localStorage.setItem("hokwish" , JSON.stringify(arr))
+// }
 function markdelete(e) {
 e.target.parentNode.parentNode.remove()
-
 }
 
 
+    //for search portion
+
+    let Top_search = document.getElementById("Top_search")
+
+    let search = document.getElementById("Top_search")
+    
+    let text = search.querySelectorAll("a")
+    
+    let search_input = document.getElementById("search_input")
+    
+    search_input.addEventListener("click",show)
+    
+    Top_search.addEventListener("mouseleave",hide)
+    
+    function show(e) { 
+    search_input.textContent = text.textContent
+       search.style.display = "flex"
+    }
+    function hide() {
+        search.style.display = "none"
+    }
+    //end of search portion
+    
+    // for cart icon portion
+    
+    let cart_pop = document.getElementById("cart")
+    let cart_icon = document.getElementById("cart_icon")
+    cart_icon.addEventListener("click", pop)
+    cart_pop.addEventListener("mouseleave", hiden)
+    
+    function pop () {
+        cart_pop.style.display = "block" 
+    }
+    function hiden() {
+        cart_pop.style.display = "none"
+    }
+    // end of cart icon
+    
+    //for makeup pop 
+    
+    let makup = document.getElementsByClassName("makeup")[0]
+    
+    let make_up = document.getElementById("make_up")
+    
+    make_up.addEventListener("mouseover" , disply)
+    make_up.addEventListener("mouseleave" , hidemakeup)
+    function disply(){
+        makup.style.display ="flex"
+    }
+    function hidemakeup() {
+        makup.style.display="none"
+    }
+    
+    // end of makeup
+    
+    // for skin pop 
+    
+    let skin = document.getElementsByClassName("makeup")[1]
+    
+    let for_skin = document.getElementById("for_skin")
+    
+    for_skin.addEventListener("mouseover" , disply2)
+    for_skin.addEventListener("mouseleave" , hideskin)
+    function disply2(){
+        skin.style.display ="flex"
+    }
+    function hideskin() {
+        skin.style.display="none"
+    }
+    //end skin pop
+    
+    //for kit&combos pop
+    
+    
+    // let kitsandcombos = document.getElementById("Kits&combos")
+    
+    // let kits = document.getElementById("kits_combos")
+    
+    // kitsandcombos.addEventListener("mouseover" , showkit)
+    // kitsandcombos.addEventListener("mouseleave" , hidkit)
+    
+    
+    // function showkit() {
+    //     kits.style.display = "block"
+    // }
+    // function hidkit() {
+    //     kits.style.display = "none"
+    // }
+    
 
 
-       //login start
+     //login start
 
-       let loginn = document.getElementById("loginn")
+    let loginn = document.getElementById("loginn")
     let clicklog = document.getElementById("clicklog")
     let cut = document.getElementById("cut")
 
@@ -737,5 +745,10 @@ e.target.parentNode.parentNode.remove()
     if(flag == true) {
             alert("Invalid Credentials")
         }
+
+    
+
+    //login end
+
 </script>
 </html>

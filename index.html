@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Makeup Items & Beauty Products</title>
+    <title>Buy Makeup Items & Beauty Products Online in India</title>
+    <link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
@@ -216,7 +217,7 @@
         margin: 1% 1%;
     }
     .img-1{
-        width: 1200px;
+        width: 100%;
         margin: 0.5% 0;
     }
     .hot-picks-img{
@@ -390,15 +391,95 @@
         
         }
         #showchat_ankit {
-            position: absolute;
-            margin-left: 4%;
+            position: fixed;
+            top:18%;
+            
+            margin-left: 1%;
             width:23%;
         }
         /* chatbox end */
-      
+
+        /* responsive */
+        #side-bar {
+            width:30%;
+            height:100%;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            position:fixed;
+            padding: 3% 4% 3% 10%;
+            line-height: 40px;
+            font-size: 20px;
+            display:none;
+        }
+        #horiline {
+            position: fixed;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            border:none;
+            padding:.8%;
+
+            display:none
+        }
+   
+        @media (max-width:781px) {
+            .topbar {
+                display: none;
+            }
+            .logo {
+                margin:auto
+            }
+            .search {
+                display: none;
+            }
+            /* #cart___icon {
+                display:block;
+            } */
+            #horiline {
+                display:block;
+            }
+            /* #side-bar {
+                display: block;
+            } */
+            .navlist {
+                display:none;
+            }
+            .brands-button > button {
+                height:48px;
+            }
+            .brands-button > button > img {
+                width:100%;
+            }
+
+        }
+        @media(min-width :780px) {
+            #horiline {
+                display:none;
+            }
+            #side-bar {
+                display:none;
+            }
+        }
+
     </style>
 </head>
 <body>
+ <button class="w3-button w3-teal w3-xlarge" onclick="dikhaobar()" id="horiline">☰</button>
+    <div id="side-bar"> 
+        <p><a onclick="htaobar()" href="new_arrival.html" style="color:black">NEW ARRIVALS</a> &nbsp;&nbsp; <span ><button onclick="htaobar()" style="background-color: red;color:white;padding: 5px;">X</button></span></p>
+        <p><a onclick="htaobar()" href="new_arrival.html" style="color:black" >MAKE UP</a></p>
+        <p><a onclick="htaobar()" href="new_arrival.html" style="color:black">SKIN</a></p>
+        <p><a onclick="htaobar()" href="brands.html" style="color:black">BRANDS</a></p>
+        <p><a onclick="htaobar()" href="products.html" style="color:black">KITS&COMBOS</a></p>
+        <p><a onclick="htaobar()" href="offers.html" style="color:black">OFFERS</a></p>
+        <p><a onclick="htaobar()" href="products.html" style="color:black">TUTORIALS</a></p>
+        <a href="hokwish.html" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a>
+        <a href="hokcart.html"> <i style="font-size:29px; " class="fa" id="cart___icon">&#xf07a;</i></a>
+        <a href="mylogin.html">Login</a>
+
+    </div>
 
     <div class="topbar">
         <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
@@ -497,7 +578,7 @@
     </div>
     <div class="makeup">
         <div>
-            <p><a href="#" class="color-pink">Eyes</a></p>
+            <p><a href="eyes.html" class="color-pink">Eyes</a></p>
             <p><a href="#">EyeBrow Enhancer</a></p>
             <p><a href="#">Eye liner</a></p>
             <p><a href="#">Eye primer</a></p>
@@ -507,7 +588,7 @@
             <p><a href="#">Mascara</a></p>
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Face</a></p>
+            <p><a href="eyes.html"  class="color-pink">Face</a></p>
             <p><a href="#">Blush</a></p>
             <p><a href="#">B.B / C.C cream</a></p>
             <p><a href="#">Bronzer</a></p>
@@ -522,7 +603,7 @@
             <p><a href="#">Setting Spray</a></p>
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Lips</a></p>
+            <p><a href="lips.html"  class="color-pink">Lips</a></p>
             <p><a href="#">Lip Balm</a></p>
             <p><a href="#">Lip Gloss</a></p>
             <p><a href="#">Lip liner</a></p>
@@ -531,11 +612,11 @@
 
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Nails</a></p>
+            <p><a href="products.html"  class="color-pink">Nails</a></p>
             <p><a href="#">Nail Polish</a></p>
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Tools & Brushes</a></p>
+            <p><a href="products.html"  class="color-pink">Tools & Brushes</a></p>
             <p><a href="#">Brush set</a></p>
             <p><a href="#">Face brush</a></p>
             <p><a href="#">Eye brush</a></p>
@@ -543,7 +624,7 @@
             <p><a href="#">Sponges and Applicators</a></p>
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Kits</a></p>
+            <p><a href="eyes.html"  class="color-pink">Kits</a></p>
             <p><a href="#">Eye Palettes</a></p>
             <p><a href="#">Face palettes</a></p>
         </div>
@@ -551,7 +632,7 @@
 
      <div class="makeup">
         <div>
-            <p><a href="#" class="color-pink">Face</a></p>
+            <p><a href="eyes.html" class="color-pink">Face</a></p>
             <p><a href="#">Cleanser</a></p>
             <p><a href="#">cream</a></p>
             <p><a href="#">Face mask</a></p>
@@ -564,23 +645,23 @@
             <p><a href="#">Moisturizer</a></p>
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Eyes</a></p>
+            <p><a href="eyes.html"  class="color-pink">Eyes</a></p>
             <p><a href="#">Eye Cream</a></p>
             <p><a href="#">Eye Patch</a></p>
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Lip Care</a></p>
+            <p><a href="lips.html"  class="color-pink">Lip Care</a></p>
             <p><a href="#">Lip Balm</a></p>
             <p><a href="#">Petrolium Jelly</a></p>
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Bath & Body</a></p>
+            <p><a href="products.html"  class="color-pink">Bath & Body</a></p>
             <p><a href="#">Shower Gel</a></p>
             <p><a href="#">Foot Scrub</a></p>
             <p><a href="#">Body Oil</a></p>
         </div>
         <div>
-            <p><a href="#"  class="color-pink">Hair</a></p>
+            <p><a href="products.html"  class="color-pink">Hair</a></p>
             <p><a href="#">Hair Masque</a></p>
             <p><a href="#">Hair Gel</a></p>
             <p><a href="#">Shampoo</a></p>
@@ -865,83 +946,3 @@ footer end -->
 </body>
 
 </html>
-
-<script>
-    //login start
-
-    let loginn = document.getElementById("loginn")
-    let clicklog = document.getElementById("clicklog")
-    let cut = document.getElementById("cut")
-
-    clicklog.addEventListener("click" , showlogin)
-   function showlogin () {
-       loginn.style.display = "block"
-   }
-
-   cut.addEventListener("click" , hiddlogin)
-
-   function hiddlogin() {
-       loginn.style.display = "none"
-   }
-
-
-   let flag = false;
-
-   function loggin(event) {
-        event.preventDefault()
-
-
-
-        let email = document.getElementById("email")
-        let password = document.getElementById("password")
-
-        let all_users = JSON.parse(localStorage.getItem("hok_users"))
-
-
-        all_users.forEach(function(user){
-
-            if(email.value == user.email && password.value == user.password) {
-
-                email.value = ""
-                    password.value = ""
-                setTimeout(function(){
-                   
-                    window.location.href = "index.html"
-                },2000)
-                
-            }else {
-            flag = true
-            return
-            }
-
-        })
-
-      
-      
-    }
-
-    if(flag == true) {
-            alert("Invalid Credentials")
-        }
-
-    
-
-    //login end
-
-    //chat box start 
-
-    let selectchatbtn = document.getElementById("chatshowbtn")
-    selectchatbtn.addEventListener("click" , chat_dikhao)
-
-    let dikhana = document.getElementById("chatwith_ankit")
-
-
-    function chat_dikhao() {
-        dikhana.style.display = "block"
-    }
-
-    function htta() {
-        dikhana.style.display = "none"
-    }
-
-</script>

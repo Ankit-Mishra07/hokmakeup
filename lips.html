@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collections - Products- Hok Makeup</title>
-    <link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
+    <title>Products</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
@@ -332,13 +331,8 @@ html {
 
 
 
-
-          /* footer */
-          #d1 {
-            /* height: 200px; */
-            background-color: #ecf0f1;
-        }
-        #d2 {
+       /* added  new css from here */
+       #d2 {
             /* height: 400px; */
             background-color: #2d3436;
             color: white;
@@ -384,22 +378,17 @@ html {
             border-radius: 3px;
 
         }
-     
-        .img100 {
-            height: 30px;
-            width: 30px;
-            border-radius: 15px;
-        }
+
         #last {
             margin-left: 15%;
             padding-top: 10px;
             padding-bottom: 10px;
             background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
- background-blend-mode: multiply,multiply;
+            background-blend-mode: multiply,multiply;
         }
         #l {
             background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
- background-blend-mode: multiply,multiply;
+            background-blend-mode: multiply,multiply;
         }
         span a {
             text-decoration: none;
@@ -410,35 +399,41 @@ html {
             color:#FF66B9;
         }
 
-        /* footer */
 
-         
-        /* login */
-        #loginn {
-            margin-left:70%;
-            background-color: white;
-            position: absolute;
-            width:20%;
-            padding:15px 20px;
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
-            display: none;
-        }
-        #myform {
-            text-align: center;background-color: white;width:100%; padding:10px;border-radius: 3px;font-size: 16px;
-        }
-        #myform:hover {
-            background-color:rgb(80, 65, 65);
-            color:rgb(252, 29, 29);
-        }
-        #account{
-            background-color:rgb(80, 65, 65);
-            color:rgb(252, 29, 29);
-            width:100%;
-            padding:10px;
-            border-radius: 4px;
-        }
+        #bottom{
+        margin: 1% 0;
+        background-color: #f7f7f7;
+    }
+    #bottom > div{
+        width: 20%;
+        margin: auto;
+        padding: 1%;
+         margin-left: 9%;
+        display: inline-block;
+        
+    }
+    #bottom > div > div {
+        display: inline-block;
+        margin-left: 5%;
+        margin-top: 6%;
+    }
+    #bottom > div > div > h2 {
+        font-family:Montserrat,sans-serif ;
+       font-size: medium;
+       margin: 6% 0;
+    }
+    #bottom > div > div > p{
+        font-family: Poppins,sans-serif;
+        font-size: small;
+        margin: 6% 0;
+    }
+    .fas , .fab{
+       color: rgb(167, 6, 6);
+       font-size: 18px ;
+    }
 
-        /* login */
+      
+
       
     </style>
 </head>
@@ -447,47 +442,14 @@ html {
         <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
         <div class="log_sign">
             <ul class="nav">
-            <li><a href="track.html">Track Order</a></li>
+            <li><a href="#">Track Order</a></li>
             <li style="font-size: 10px;"> <i style='font-size:15px' class='fas'>&#xf406;</i> </li>
-            <li id="clicklog">Login</li>
+            <li><a href="#">Login</a></li>
             <li>or</li>
-            <li> <a href="account.html">Create an account</a></li>
+            <li> <a href="#">Create an account</a></li>
         </ul>
         </div>
     </div>
-
-    <!-- login -->
- 
-    <div id="loginn">
-        <p style="text-decoration: underline; font-weight: bold;display:inline-block">CUSTOMER LOGIN</p>
-        <button style="background-color: white;font-weight: bold;border-color: white;margin-left: 30%;" id="cut">X</button> <br>
-        <hr>
-        <p style="margin-top: 20px;">If you are already registered, please log in.</p> <br>
-       
-        <lable style="font-weight: bold;font-size: 12px;" >Email<sup style="color:red">*</sup></lable> <br> <br>
-        <input type="email" placeholder="Email" style="width:100%;padding:10px;border-radius: 3px;" id="email"><br> <br>
-       
-        <lable style="font-weight: bold;font-size: 12px;">Password<sup style="color:red">*</sup></lable> <br> <br>
-        <input type="password" placeholder="Password" style="width:100%;padding:10px;border-radius: 3px;" id="password"><br> <br>
-       
-        <p>Forgot your password?</p> <br>
-        
-        <button id="myform" onclick="loggin(event)">LOGIN</button>
-        
-        <br> <br>
-
-        <div style="background-color: #F7F7F7;width:100%">
-
-            <p>Create your account and enjoy a new shopping experience.</p> <br>
-
-            <a href="account.html"><button id="account">CREATE A NEW ACCOUNT</button></a> <br>
-
-        </div>
-        
-
-</div>
-   <!-- login end -->
-   
    
    
     <div class="logo_search">
@@ -503,7 +465,7 @@ html {
                 <a href="#"><button class="search_btn"><i class="fas fa-search" ></button></i></a>
                 <div id="Top_search" class="hide_search">
                     <p>TRENDING</p>
-                    <a href="new_arrival.html">New arrival</a>
+                    <a href="#">New arrival</a>
                     <a href="#">Makeup Kit</a>
                     <a href="#">Make Revolution</a>
                     <a href="#">Milani</a>
@@ -512,9 +474,9 @@ html {
            
            </li>
           
-           <li ><a href="hokwish.html" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
+           <li ><a href="#" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
           
-           <li><a href="hokcart.html"> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
+           <li><a href="#"> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
           
     <div id="cart">
         <p></p>
@@ -529,13 +491,13 @@ html {
 
     <div class="navlist">
 
-        <a href="new_arrival.html">NEW ARRIVALS</a>
+        <a href="#">NEW ARRIVALS</a>
         
          <a href="#" id="make_up">MAKE UP</a>
          <a href="#" id="for_skin">SKIN</a>
-         <a href="brands.html">BRANDS</a>
+         <a href="#">BRANDS</a>
          <a href="#" id="kits&combos">KITS&COMBOS</a>
-         <a href="offers.html">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
+         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
          <a href="#">TUTORIALS</a>
 
     </div>
@@ -671,7 +633,7 @@ html {
         <div>
             <div><h4>CATEGORY</h4></div>
             <input type="checkbox" id="eyes">
-            <a href="eyes.html" style="color:black"><lable>Eyes</lable></a> <br>
+            <lable>Eyes</lable> <br>
             <input type="checkbox" id="lips">
             <lable>Lips</lable>
         </div>
@@ -680,14 +642,14 @@ html {
             <input type="checkbox" id="Beauty-creations">
             <lable>Beauty Creation</lable> <br>
             <input type="checkbox" id="Hok-Makeup">
-            <a href="eyes.html" style="color:black"><lable>Hok Makeup</lable></a> <br>
+            <lable>Hok Makeup</lable> <br>
             <input type="checkbox" id="Revolution Beauty">
             <lable>Revolution Beauty</lable>
         </div>
         <div>
             <div><h4>PRICE</h4></div>
             <input type="checkbox" id="0-499">
-            <a href="eyes.html" style="color:black"><lable>Rs.0 - Rs.499</lable></a> <br>
+            <lable>Rs.0 - Rs.499</lable> <br>
             <input type="checkbox" id="500-999">
             <lable>Rs.500 - Rs.999</lable> <br>
             <input type="checkbox" id="1000-1999">
@@ -696,7 +658,7 @@ html {
         <div>
             <div><h4>DISCOUNT</h4></div>
             <input type="checkbox" id="15%">
-            <a href="eyes.html" style="color:black"><lable>Upto 15%</lable></a> <br>
+            <lable>Upto 15%</lable> <br>
             <input type="checkbox" id="30-50%">
             <lable>30% - 50%</lable> <br>
             <input type="checkbox" id="50%">
@@ -705,6 +667,38 @@ html {
      </div>
      
         <div id="box"></div>
+
+    </div>
+    <br>
+    <br/>
+    <br/>
+    <br/>
+    <div id="bottom">
+
+        <div>
+            <i class="fas fa-gift"></i>
+            <div>
+                <h2>GENUINE PRODUCTS</h2>
+                <P>Sourced Directly From Brands</P>
+            </div>
+            
+        </div>
+
+        <div>
+            <i class="fas fa-truck"></i>
+            <div>
+                <h2>FREE SHIPPING</h2>
+                <P>For Orders Above Rs. 600</P>
+            </div>
+        </div>
+
+        <div>
+            <i class="fab fa-cc-visa"></i>
+            <div>
+                <h2>SECURE PAYMENTS</h2>
+                <P>Using 256-bit SSL Encryption</P>
+            </div>
+        </div>
 
     </div>
 
@@ -717,9 +711,18 @@ html {
 
 
 
-    <br><br> <br><br><br><br><br><br>
-    <!-- footer -->
-    
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div id="d1">
 
@@ -794,10 +797,7 @@ html {
             All rights reserved © 2018 Hok Beauty Pvt. Ltd.
         </div>
     </div>
-
-    <!-- footer end -->
-
-
+    
 </body>
 
 <script>
@@ -896,133 +896,134 @@ function hideskin() {
 
 let products = [
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1479929-RELOVE-POWER-LASH-WATERPROOF_01-1080x1080-bc5bdc6e-2387-4457-a020-3c483ff25ac5_110x110@2x.jpg?v=1632836953",
-        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/1479929-RELOVE-POWER-LASH-WATERPROOF_02-1080x1080-9fdedbfd-3c88-43df-bdc3-fcbb11da3738_110x110@2x.jpg?v=1632836953",
-        brand:"Hok Makeup",
-        name:"Revolution Relove Power Lash",
-        margin: "750",
-        price:"305"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Iresistible_110x110@2x.jpg?v=1630136614",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations1_1_29332f1b-8e0b-4cca-be98-0247d5f8e467_110x110@2x.jpg?v=1630136617",
+        brand:"Beauty Creations",
+        name:"Beauty Creations Long Wear Matte Lip Gloss - Irresistible",
+        margin: "1200",
+        price:"799"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1511216-Revlove-SuperHighlight-Blushed-1-1000x1000-67fd8457-9cb4-42a5-8f42-52ec41478aec_110x110@2x.jpg?v=1627472927",
-        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/20210428_213045-1000x1000-997b3488-83e4-402d-a053-98d017ecc094_110x110@2x.jpg?v=1627473080",
-        brand: "Hok Makeup",
-        name:"Revolution Relove Super Highlighter",
-        margin: "800",
-        price:"419"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0744109494161-1_110x110@2x.jpg?v=1631877963",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0744109494161-2_110x110@2x.jpg?v=1631877963",
+        brand:"Beauty Creations",
+        name:"Rosy Gold Naughty & Nice Lipstick Kit",
+        margin: "1000",
+        price:"617"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1479608-Revlove-ColourPlay-ContourTrioPalette-Sugar-1-1000x1000-b2f8f954-bb9e-461d-9ea9-0759ce36f186_110x110@2x.jpg?v=1627472001",
-        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/202105059165986912154172305-1000x1000-63e7f3d7-fc20-4b12-9b76-c40d28bea2f2_75ac3bae-48e7-44c9-a6e1-f23645daf09e_110x110@2x.jpg?v=1627472049",
-        brand: "Hok Makeup",
-        name:"Revolution Relove Colour",
-        margin: "650",
-        price:"350"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1_300cbe62-e753-4206-b120-a33ce6fdaf07_110x110@2x.jpg?v=1622801476",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Glorified106_110x110@2x.jpg?v=1622800640",
+        brand:"Beauty Creations",
+        name:"Make it Matte Liquid Lipstick Trio Kit - Destiny + Glorified + Excess",
+        margin: "1500",
+        price:"999"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/812b_2_110x110@2x.jpg?v=1615206349",
-        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/812b_3_110x110@2x.jpg?v=1615206349",
-        brand: "Hok Makeup",
-        name:"LA Colors Pearl Metallic Eye Liner",
-        margin: "750",
-        price:"275"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/milanicomboimage_110x110@2x.jpg?v=1624694348",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Lipstick_Swatch_110x110@2x.jpg?v=1625560590",
+        brand:"Beauty Creations",
+        name:"Milani Matte Lipstick Trio",
+        margin: "1090",
+        price:"899"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1479790-Revlove-Blade-BrowPencil-DarkBrown-2-1000x1000-a89b4905-4f71-4403-9f3a-64157a4d6893_110x110@2x.jpg?v=1626328075",
-        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/202105021989092252055866164-1000x1000-9e891614-1660-4fff-8a0d-769ccceaef24_1024x1024.jpg?v=1626328084",
-        brand: "Hok Makeup",
-        name:"Milani Supreme Kohl Kajal Eyeliner",
-        margin: "750",
-        price:"475"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/40285_-_RevolutionPro_-Supreme_Matte_Lip_Pigment__-__Charade_110x110@2x.jpg?v=1621506953",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/40285_-_1_-_RevolutionPro_-Supreme_Matte_Lip_Pigment__-__Charade_110x110@2x.jpg?v=1621506953",
+        brand: "Beauty Creations",
+        name:"Revolution Pro Supreme Matte Lip Pigment",
+        margin: "1405",
+        price:"780"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1511179-Revlove-ColourPlay-Manifest-ShadowPalette-1-1000x1000-37959298-518b-44d3-8139-0ec24ce27581_110x110@2x.jpg?v=1627391144",
-        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/RELOVE-crops6_3_23010bf0-37cb-4458-bfd2-a87e9c410a25_110x110@2x.jpg?v=1627391164",
-        brand: "Hok Makeup",
-        name:"Revolution Pro Regeneration Palette",
-        margin: "750",
-        price:"405"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/7_3c962b07-491b-44e7-bfa6-06ce007e765c_110x110@2x.jpg?v=1620678553",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/7.1_110x110@2x.jpg?v=1620679017",
+        brand: "Beauty Creations",
+        name:"L.A. Color Combo - 7",
+        margin: "1001",
+        price:"799"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/KH116_RevLove_033_1_58894db7-d5dc-4daa-a6ed-b06d8d51d899_110x110@2x.jpg?v=1627460805",
-        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/1479745-Revlove-GlamBalm-CocoNutty-Coconut-1-1000x1000-ecc912e9-bac5-487c-ab57-7f28997bc267_110x110@2x.jpg?v=1627459319",
-        brand: "Hok Makeup",
-        name:"Revolution Relove Colour",
-        margin: "750",
-        price:"375"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/GP734_prod_img_2_1024x1024_77627cae-294f-41f8-a149-afa5cd668dee_110x110@2x.jpg?v=1630137098",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/blackout_grande_4b791c67-c344-471b-967d-ba0364361d1a_110x110@2x.jpg?v=1630137100",
+        brand: "Beauty Creations",
+        name:"L.A. Girl Shockwave Neon Lip Liner",
+        margin: "1302",
+        price:"665"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1479905-Revlove-DipEyeliner-Black-1-1000x1000-8e74d6f7-7423-4d0a-95cf-c2dcf8ab0c4d_110x110@2x.jpg?v=1627457487",
-        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/202105025467737153531173393-1000x1000-91a58811-51c1-47b9-a7a1-dfe6341a2ba0_110x110@2x.jpg?v=1627457528",
-        brand: "Hok Makeup",
-        name:"LA Colors ThinEye Liner",
-        margin: "750",
-        price:"306"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/40345_2_110x110@2x.jpg?v=1569239311",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/40345_1_110x110@2x.jpg?v=1569239307",
+        brand: "Beauty Creations",
+        name:"Revolution Pro Lip Prime And Perfect",
+        margin: "1000",
+        price:"600"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0005934e-a667-47e7-8d8c-61218340043f_110x110@2x.jpg?v=1630138828",
-        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/27cd2af2-da12-4959-9309-a5da622c0303_110x110@2x.jpg?v=1630138833",
-        brand: "Hok Makeup",
-        name:"I Heart makeup I HeartChocolate",
-        margin: "750",
-        price:"455"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0728228565558-3_110x110@2x.jpg?v=1631879036",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0728228565558-4_110x110@2x.jpg?v=1631879036",
+        brand: "Beauty Creations",
+        name:"Rosy Gold Matte Lipstick",
+        margin: "1300",
+        price:"999"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/C42924-Nude_110x110@2x.jpg?v=1613365717",
-        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/C42924_nude_110x110@2x.jpg?v=1613022923",
-        brand: "Hok Makeup",
-        name:"REVOLUTION fundamental",
-        margin: "750",
-        price:"275"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/MURCOMBO33_45a8132c-1a2f-49ab-9865-837c6ce9acf7_110x110@2x.jpg?v=1612171195",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/LipBoutiqueColourPops_MatteLipstick_02_70a53418-5907-4d16-b5f9-fa25d82329b4_110x110@2x.jpg?v=1614075735",
+        brand: "Beauty Creations",
+        name:"Revolution Matte Lipstick Combo 2",
+        margin: "1050",
+        price:"775"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/C42945_amazed_110x110@2x.jpg?v=1613023746",
-        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/C42945_amazed_open_110x110@2x.png?v=1613213572",
-        brand: "Hok Makeup",
-        name:"Revolution Pro Regeneration",
-        margin: "750",
-        price:"299"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1194846-RevolutionPro-NewNeutrals-BlushedSatinMattLipstick-Rumba_2-720x720-747df331-c6d3-4b02-b475-0a3e15_110x110@2x.jpg?v=1615207665",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1194846-RevolutionPro-NewNeutrals-BlushedSatinMattLipstick-Rumba_4-720x720-93f15c6f-6331-4f42-9209-8f9058_110x110@2x.jpg?v=1615207665",
+        brand: "Beauty Creations",
+        name:"Revolution Pro New Neutrals Blushed Satin Matte Lipstick",
+        margin: "1050",
+        price:"899"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/NICKA1_110x110@2x.jpg?v=1615314725",
-        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/concept6_720x_7471d50a-5498-4582-a5f4-aab0685bbed8_1024x1024.jpg?v=1612607596",
-        brand: "Hok Makeup",
-        name:"XX Revolution Eyeshadow",
-        margin: "750",
-        price:"399"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Undressed_cdda07aa-6905-4c4a-a67d-cfd58c874d4d_110x110@2x.jpg?v=1630136648",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/undressed_110x110@2x.jpg?v=1630136669",
+        brand: "Beauty Creations",
+        name:"Wet N Wild Silk Finish Lipstick",
+        margin: "1290",
+        price:"879"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/l-a-colors-liquid-eyeliner-black_110x110@2x.png?v=1569111873",
-        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/l-a-colors-liquid-eyeliner-black-2_110x110@2x.png?v=1569111873",
-        brand: "Hok Makeup",
-        name:"LA Colors Liquid Eye Liner",
-        margin: "750",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/lip-smacker-coca-cola-tin-box-6pcs_110x110@2x.jpg?v=1569202700",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/lip-smacker-coca-cola-tin-box-6pcs-1_110x110@2x.jpg?v=1569202700",
+        brand: "Beauty Creations",
+        name:"Lip Smacker Coca Cola Lip Balm Tin Box 6pcs",
+        margin: "1090",
         price:"449"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/5_257dbe32-3298-4497-abe7-df442f532b7d_110x110@2x.jpg?v=1625912497",
-        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/e880darkbrown_110x110@2x.jpg?v=1625911919",
-        brand: "Hok Makeup",
-        name:"Wet N Wild H2O Proof Liquid EyeLiner",
-        margin: "550",
-        price:"355"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1_299d5094-15f9-4fec-a90a-d60226326c3c_110x110@2x.jpg?v=1630138332",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/2_97cd8809-b4f5-4805-963a-68f4c7f8b310_110x110@2x.jpg?v=1630138335",
+        brand: "Beauty Creations",
+        name:"Milani Rose Transforming Lip Balm",
+        margin: "1250",
+        price:"799"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1377058_2_43269b49-4e4c-46e2-8797-a382d4dc4742_110x110@2x.jpg?v=1615314773",
-        img2:"https://cdn.shopify.com/s/files/1/1743/7443/products/ForeverFlawlessDynamicTranquilEyeshadowPalette_5598492a-d486-49e8-8ce1-546d45346061_110x110@2x.jpg?v=1630659461",
-        brand: "Hok Makeup",
-        name:"Makeup Revolution Forever Flawless",
-        margin: "750",
-        price:"498"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Combo_706cdab5-6138-4d14-bcef-2aec5c5fa462_110x110@2x.jpg?v=1622744412",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/HeartRace113_110x110@2x.jpg?v=1622743549",
+        brand: "Beauty Creations",
+        name:"Make it Matte Liquid Lipstick Trio Kit - Cupcake + Rouge +åÊHeart Race",
+        margin: "1080",
+        price:"798"
     },
     {
-        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1168526-Revolution-ColourBook-ShadowPalette-CB03_2-1000x1000-e8aac591-d2c2-45ca-a2aa-14c23de278c7_110x110@2x.jpg?v=1630138830",
-        img2: "https://cdn.shopify.com/s/files/1/1743/7443/products/Adjustments-1000x1000-8f9dc8ce-a130-4445-b327-ee8b47499cb6_110x110@2x.jpg?v=1630138838",
-        brand: "Hok Makeup",
-        name:"Makeup Revolution Eyeshadow",
-        margin: "750",
-        price:"359"
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/milanicomboimage_110x110@2x.jpg?v=1624694348",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Lipstick_Swatch_110x110@2x.jpg?v=1625560590",
+        brand: "Beauty Creations",
+        name:"Milani Matte Lipstick Trio",
+        margin: "1290",
+        price:"650"
     }
+
 ]
 
 
@@ -1154,66 +1155,5 @@ let arr = products.sort(function (a,b){
 showhokproduct(arr)
 };
 
-
-//login start
-
-let loginn = document.getElementById("loginn")
-    let clicklog = document.getElementById("clicklog")
-    let cut = document.getElementById("cut")
-
-    clicklog.addEventListener("click" , showlogin)
-   function showlogin () {
-       loginn.style.display = "block"
-   }
-
-   cut.addEventListener("click" , hiddlogin)
-
-   function hiddlogin() {
-       loginn.style.display = "none"
-   }
-
-
-   let flag = false;
-
-   function loggin(event) {
-        event.preventDefault()
-
-
-
-        let email = document.getElementById("email")
-        let password = document.getElementById("password")
-
-        let all_users = JSON.parse(localStorage.getItem("hok_users"))
-
-
-        all_users.forEach(function(user){
-
-            if(email.value == user.email && password.value == user.password) {
-
-                email.value = ""
-                    password.value = ""
-                setTimeout(function(){
-                   
-                    window.location.href = "index.html"
-                },2000)
-                
-            }else {
-            flag = true
-            return
-            }
-
-        })
-
-      
-      
-    }
-
-    if(flag == true) {
-            alert("Invalid Credentials")
-        }
-
-    
-
-    //login end
 </script>
 </html>
