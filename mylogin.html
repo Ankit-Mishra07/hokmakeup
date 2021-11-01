@@ -6,35 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login to Hokmakeup & Beauty products</title>
     <link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
-    <style>
-         /* login */
-         #loginn {
-            margin:auto;
-            background-color: white;
-            position: absolute;
-            width:20%;
-            padding:15px 20px;
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
-        
-        }
-        #myform {
-            text-align: center;background-color: white;width:100%; padding:10px;border-radius: 3px;font-size: 16px;
-        }
-        #myform:hover {
-            background-color:rgb(80, 65, 65);
-            color:rgb(252, 29, 29);
-        }
-        #account{
-            background-color:rgb(80, 65, 65);
-            color:rgb(252, 29, 29);
-            width:100%;
-            padding:10px;
-            border-radius: 4px;
-        }
-
-        /* login */
-
-    </style>
+   <link rel="stylesheet" href="./styles/mylogin.css">
 </head>
 <body>
     <div id="loginn">
@@ -67,47 +39,6 @@
 </div>
 </body>
 </html>
-<script>
-     let flag = false;
-
-function loggin(event) {
-     event.preventDefault()
-
-
-
-     let email = document.getElementById("email")
-     let password = document.getElementById("password")
-
-     let all_users = JSON.parse(localStorage.getItem("hok_users"))
-
-
-     all_users.forEach(function(user){
-
-         if(email.value == user.email && password.value == user.password) {
-
-             email.value = ""
-                 password.value = ""
-             setTimeout(function(){
-                
-                 window.location.href = "index.html"
-             },2000)
-             
-         }else {
-         flag = true
-         return
-         }
-
-     })
-
+<script src="./scripts/mylogin.js">
    
-   
- }
-
- if(flag == true) {
-         alert("Invalid Credentials")
-     }
-
-     function back() {
-         window.location.href = "index.html"
-     }
 </script>

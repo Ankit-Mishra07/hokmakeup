@@ -6,115 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shipping - Hok Makeup</title>
     <link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
-    <style>
-                /* div {
-            /* border: 1px solid black; */
-        /* } */ 
-        .b1 {
-            display: flex;
-            /* grid-template-columns: 50% 30%; */
-            /* background-color: burlywood; */
-            /* height: 800px; */
-            /* border: 1px solid black; */
-            justify-content: space-between;
-        }
-        .b2 {
-            /* border: 1px solid black; */
-            width: 50%;
-        }
-        .textc {
-            text-align: center;
-        }
-        .textl {
-            text-align: left;
-            padding-left: 15px;
-        }
-        .textr {
-            text-align: right;
-            padding-top: 22px;
-            padding-right: 15px;
-        }
-        img {
-            margin-top: 50px;
-            height: 70px;
-        }
-        .boxinr {
-            width: 70%;
-            margin: auto auto auto 25%;
-        }
-        .biginp {
-            width: 95%;
-            height: 40px;
-            border-radius: 4px;
-            /* margin: 5px; */
-        }
-        .inpname{
-            width: 45%;
-            height: 40px;
-            border-radius: 4px;
-        }
-        .inppin {
-            width: 29%;
-            height: 40px;
-            border-radius: 4px;
-        }
-        input {
-            margin: 5px;
-        }
- 
-        .dwnbtn {
-            text-align: right;
-      
-        }
-        .dwnreturn {
-            text-align: left;
-            padding-top: 20px;
-            padding-left: 15px;
-            padding-bottom: 20px;
-        }
-
-
-        hr{
-            color: black;
-            height: 1px;
-            background-color: black;
-        }
-
-        #rightbox1 {
-            background-color: #fcf7f7;
-        }
-        .boxinl {
-            width: 70%;
-            margin: auto 25% auto auto;
-        }
-        #giftinp {
-            width: 65%;
-            height: 35px;
-        }
-        #b2rcoupon {
-            width: 75%;
-            height: 35px;
-            border-radius: 4px;
-        }
-        #b2rbtn {
-            width: 15%;
-            height: 35px;
-            border-radius: 4px;
-        }
-      
-        #boxright > div {
-            display:flex;
-            justify-content: space-around;
-            align-items: center;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        #left_div {
-            padding:70px 20px 50px 100px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-    </style>
+   <link rel="stylesheet" href="./styles/shipping.css">
 </head>
 <body>
     <div style="display:grid;grid-template-columns: 50% 50%;">
@@ -160,7 +52,7 @@
                 <br>
                 <div class="dwnreturn">
                     <div style="display:flex;justify-content: space-between;align-items: center;" >
-                       <p> Subtotal </p> <p class="dekhototal"></p>
+                       <p> Subtotal </p> <p class="dekhototal" id="dekho1"></p>
                     </div> 
                 
                     <div style="display:flex;justify-content: space-between;align-items: center;">
@@ -174,7 +66,7 @@
                   <div>  Total
                     <p id="tax"></p>
                     </div>
-                    <div style="font-size: 20px;font-weight: bold;" class="dekhototal"></div>
+                    <div style="font-size: 20px;font-weight: bold;" class="dekhototal" id="dekho2"></div>
                 </div>
             </div>
 
@@ -184,82 +76,5 @@
 </div>
 </body>
 
-<script>
-    let parent =  document.getElementById("boxright")
-
-let products = JSON.parse(localStorage.getItem("hokcart"));
-
-let sum = 0;
-
-function showhokproduct() {
-
-    products.forEach(function(products){
-
-        let div = document.createElement("div")
-
-        let img = document.createElement("img")
-        img.setAttribute("class" , "dekhoimg")
-        img.src = products.img
-
-        let name = document.createElement("p")
-        name.setAttribute("class" , "dekhoname")
-        name.textContent = products.name
-
-
-        let price = document.createElement("p")
-        price.textContent =  "₹"+products.price + ".00"
-        price.setAttribute("class" , "dekhoprice")
-
-        sum = sum + Number(products.price)
-
-        div.append(img,name,price)
-
-        parent.append(div)
-
-
-    })
-
-}
-showhokproduct()
-
-let dekhototal = document.getElementsByClassName("dekhototal")[0]
-
-dekhototal.textContent = "₹"+sum+ ".00"
-
-
-let tax = document.getElementById("tax")
-
-tax.textContent = "including" + " " + "₹" + Math.round((sum*0.12)) + " " + "in taxes"
-
-let total = document.getElementsByClassName("dekhototal")[1]
-
-total.textContent = "₹"+sum+ ".00"
-
-let input = document.getElementById("b2rcoupon")
-
-let apply = document.getElementById("b2rbtn")
-apply.addEventListener("click" , dedo_discount)
-
-function dedo_discount(event) {
-    event.preventDefault();
-    if(input.value == "masai30") {
-        let add = sum - (sum * 0.3)
-        dekhototal.innerHTML = null
-        dekhototal.textContent = "₹"+add+ ".00"
-        total.textContent = "₹"+add+ ".00"
-        input.value=""
-    } 
-}
-
-
-let data = JSON.parse(localStorage.getItem("hok_info"))
-
-let connect = document.getElementById("connect")
-let addres_ = document.getElementById("addres_")
-
-connect.textContent = data[data.length-1].contact
-addres_.textContent = data[data.length-1].address
-
-localStorage.setItem("hok_info" , JSON.stringify(data))
-</script>
+<script src="./scripts/shipping.js"></script>
 </html>
