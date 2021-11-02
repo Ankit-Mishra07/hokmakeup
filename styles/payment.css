@@ -70,3 +70,9 @@ html, body {
 .mypaise{
     background-color: black;color:white;width:100%; padding:20px;border-radius:0 0 20px 20px;
 }
+#hok-namee{
+    font-size: 22px;
+}
+.totly{
+    margin-top: 5px;font-weight: lighter;
+}

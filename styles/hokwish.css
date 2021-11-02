@@ -314,3 +314,6 @@ html {
     #width30{
         width: 30%;
     }
+    #mytable{
+        width:80%;margin: auto;
+    }

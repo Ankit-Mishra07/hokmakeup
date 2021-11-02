@@ -348,3 +348,15 @@ background-blend-mode: multiply,multiply;
     .font15_{
         font-size:15px
     }
+    .marg-20{
+        margin-top: 20px;
+    }
+    .crated{
+        background-color: #F7F7F7;width:100%
+    }
+    .b2b2{
+        margin-top: 30px;
+    }
+    #hrhr{
+        width: 70%; margin: auto;
+    }

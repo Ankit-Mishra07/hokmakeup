@@ -464,3 +464,18 @@ background-blend-mode: multiply,multiply;
     .cuX{
         background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
     }
+    #CUSTOMER{
+        text-decoration: underline; font-weight: bold;display:inline-block
+    }
+    .marg-20{
+        margin-top: 20px;
+    }
+    .my-mail{
+        font-weight: bold;font-size: 12px;
+    }
+    .colorRR{
+        color:red
+    }
+    #crated{
+        background-color: #F7F7F7;width:100%
+    }
