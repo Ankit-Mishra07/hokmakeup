@@ -328,3 +328,34 @@
         }
 
         /* login */
+        #fa__ce{
+            font-size:24px; color:white; margin:5px 10px
+        }
+        #hotty{
+            background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;
+        }
+        #my__wish{
+            font-size:35px; margin:0px; padding:0px
+        }
+
+        .marg--top{
+            margin-top: 30px;
+        }
+        #hrhr{
+            width: 70%; margin: auto;
+        }
+        #CUSTOMER{
+            text-decoration: underline; font-weight: bold;display:inline-block
+        }
+        .cutty{
+            background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+        }
+        .my--mail{
+            font-weight: bold;font-size: 12px;
+        }
+        .colorRR{
+            color: red;
+        }
+        .passs{
+            width:100%;padding:10px;border-radius: 3px;
+        }

@@ -312,3 +312,39 @@ background-blend-mode: multiply,multiply;
     }
 
     /* login */
+
+    #fa___ce {
+        font-size:24px; color:white; margin: 5px 10px
+    }
+
+    #ho__t {
+        background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;
+    }
+
+    #wi__sh {
+        font-size:35px; margin:0px; padding:0px
+    }
+    .my___mail {
+        width:100%;padding:10px;border-radius: 3px;
+    }
+
+    .re___d{
+        color: red;
+    }
+    .edit__it {
+        font-weight: bold;font-size: 12px;
+    }
+
+    .cut__it{
+        background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+    }
+    #CUSTOMER {
+        text-decoration: underline; font-weight: bold;display:inline-block
+    }
+
+    .font10 {
+        font-size: 10px;
+    }
+    .font15_{
+        font-size:15px
+    }

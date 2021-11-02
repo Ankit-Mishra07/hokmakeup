@@ -296,3 +296,105 @@ html {
     }
 
     /* login */
+
+    .font10{
+        font-size: 10px;
+    }
+    .font15{
+        font-size: 15px;
+    }
+    #CUSTOMER{
+        text-decoration: underline; font-weight: bold;display:inline-block
+    }
+    .cuttX{
+        background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+    }
+    #margprot{
+        margin-top: 20px;
+    }
+    .my____mail{
+        font-weight: bold;font-size: 12px;
+    }
+    .re__d{
+        color: red;
+    }
+    .passss{
+        width:100%;padding:10px;border-radius: 3px;
+    }
+    #class_new{
+        background-color: #F7F7F7;width:100%
+    }
+    .my__wish{
+        font-size:35px; margin:0px; padding:0px
+    }
+    .font29{
+        font-size: 29px;
+    }
+    #HO_T{
+        background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;
+    }
+    #ho__me{
+        display: inline-block;
+    }
+    #edirr{
+        display: inline-block; margin:0px 10px
+    }
+    #shop___cart{
+        margin-top: 20px; display: inline-block;
+    }
+    #continueforit{
+        display: inline; margin-left: 850px;
+    }
+    #due__to{
+        margin-top: 30px;font-weight: lighter;
+    }
+    #edit__hi{
+        display:flex; justify-content: space-between; padding:20px 0px;
+    }
+    #totls{
+        font-weight: bold; font-size: 16px;
+    }
+    #total_price{
+        font-weight: bold; font-size: 20px;
+    }
+    #noteed{
+        color:white; background-color: rgb(64, 214, 64); padding:2px 5px;font-weight: bold;display: inline-block;
+    }
+    #add_A{
+        font-weight: bold;display: inline-block;
+    }
+    #we_commit{
+        margin-top: 30px; font-weight: lighter; font-style: italic;text-align: center
+    }
+    #need_help{
+        margin-top: 30px; font-weight: lighter;text-align: center;
+    }
+    #get_estimate{
+        background-color:#eef0f5;padding: 10px;text-align: center;font-weight: lighter;
+    }
+    #frm{
+        width:100%;margin-top: 40px;
+    }
+    .postels{
+        font-size: 14px; font-weight: bold;
+    }
+    .brbrbr{
+        width:100%; text-align: left;padding: 10px;
+    }
+    #country_ {
+        font-size: 14px; font-weight: bold;
+    }
+    #count___try{
+
+    width:100%; text-align: left; padding: 10px;
+    }
+
+    #CALCULATES{
+
+    width:100%;border-radius: 4px; padding: 10px; background-color: #383E47;color:rgb(235, 95, 95);font-size: 16px;
+    }
+
+    .my__cal{
+
+    margin-top: 30px;font-weight: lighter;
+    }

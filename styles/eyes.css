@@ -425,3 +425,42 @@ background-blend-mode: multiply,multiply;
     }
 
     /* login */
+    .font10{
+        font-size: 10px;
+    }
+    .font15{
+        font-size: 15px;
+    }
+    #fa__ce{
+        font-size:24px; color:white; margin: 5px 10px
+    }
+    #hereis_HR{
+        width: 70%; margin: auto;
+    }
+    #pro_colorB{
+        color: black;
+    }
+    #pro__w{
+        width: 200px;
+    }
+    #dis___in{
+        display: inline-block;
+    }
+    #dis___{
+        display: inline-block; margin:0px 10px
+    }
+    #ho___t{
+        background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;
+    }
+    .font__29{
+        font-size: 29px;
+    }
+    #my___wish{
+        font-size:35px; margin:0px; padding:0px
+    }
+    .my__mail{
+        width:100%;padding:10px;border-radius: 3px;
+    }
+    .cuX{
+        background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+    }

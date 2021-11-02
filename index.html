@@ -16,13 +16,13 @@
 <body>
  <button class="w3-button w3-teal w3-xlarge" onclick="dikhaobar()" id="horiline">☰</button>
     <div id="side-bar"> 
-        <p><a onclick="htaobar()" href="new_arrival.html" style="color:black">NEW ARRIVALS</a> &nbsp;&nbsp; <span ><button onclick="htaobar()" style="background-color: red;color:white;padding: 5px;">X</button></span></p>
-        <p><a onclick="htaobar()" href="new_arrival.html" style="color:black" >MAKE UP</a></p>
-        <p><a onclick="htaobar()" href="new_arrival.html" style="color:black">SKIN</a></p>
-        <p><a onclick="htaobar()" href="brands.html" style="color:black">BRANDS</a></p>
-        <p><a onclick="htaobar()" href="products.html" style="color:black">KITS&COMBOS</a></p>
-        <p><a onclick="htaobar()" href="offers.html" style="color:black">OFFERS</a></p>
-        <p><a onclick="htaobar()" href="products.html" style="color:black">TUTORIALS</a></p>
+        <p><a onclick="htaobar()" href="new_arrival.html" class="colorB">NEW ARRIVALS</a> &nbsp;&nbsp; <span ><button onclick="htaobar()" style="background-color: red;color:white;padding: 5px;">X</button></span></p>
+        <p><a onclick="htaobar()" href="new_arrival.html" class="colorB" >MAKE UP</a></p>
+        <p><a onclick="htaobar()" href="new_arrival.html" class="colorB">SKIN</a></p>
+        <p><a onclick="htaobar()" href="brands.html" class="colorB">BRANDS</a></p>
+        <p><a onclick="htaobar()" href="products.html" class="colorB">KITS&COMBOS</a></p>
+        <p><a onclick="htaobar()" href="offers.html" class="colorB">OFFERS</a></p>
+        <p><a onclick="htaobar()" href="products.html" class="colorB">TUTORIALS</a></p>
         <a href="hokwish.html" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a>
         <a href="hokcart.html"> <i style="font-size:29px; " class="fa" id="cart___icon">&#xf07a;</i></a>
         <a href="mylogin.html">Login</a>
@@ -34,7 +34,7 @@
         <div class="log_sign">
             <ul class="nav">
             <li><a href="track.html">Track Order</a></li>
-            <li style="font-size: 10px;"> <i style='font-size:15px' class='fas'>&#xf406;</i> </li>
+            <li class="font10"> <i  class='fas font15'>&#xf406;</i> </li>
             <li id="clicklog"><a>Login</a></li>
             <li>or</li>
             <li> <a href="account.html">Create an account</a></li>
@@ -45,16 +45,16 @@
     <!-- login -->
  
     <div id="loginn">
-        <p style="text-decoration: underline; font-weight: bold;display:inline-block">CUSTOMER LOGIN</p>
-        <button style="background-color: white;font-weight: bold;border-color: white;margin-left: 30%;" id="cut">X</button> <br>
+        <p id="CUSTOMER">CUSTOMER LOGIN</p>
+        <button class="cutty" id="cut">X</button> <br>
         <hr>
-        <p style="margin-top: 20px;">If you are already registered, please log in.</p> <br>
+        <p id="marg-top">If you are already registered, please log in.</p> <br>
        
-        <lable style="font-weight: bold;font-size: 12px;" >Email<sup style="color:red">*</sup></lable> <br> <br>
-        <input type="email" placeholder="Email" style="width:100%;padding:10px;border-radius: 3px;" id="email"><br> <br>
+        <lable class="my__mail" >Email<sup class="colorRR">*</sup></lable> <br> <br>
+        <input type="email" placeholder="Email" class="brbrbr" id="email"><br> <br>
        
-        <lable style="font-weight: bold;font-size: 12px;">Password<sup style="color:red">*</sup></lable> <br> <br>
-        <input type="password" placeholder="Password" style="width:100%;padding:10px;border-radius: 3px;" id="password"><br> <br>
+        <lable class="my__mail">Password<sup class="colorRR">*</sup></lable> <br> <br>
+        <input type="password" placeholder="Password" class="brbrbr" id="password"><br> <br>
        
         <p>Forgot your password?</p> <br>
         
@@ -62,7 +62,7 @@
         
         <br> <br>
 
-        <div style="background-color: #F7F7F7;width:100%">
+        <div id="create_tata">
 
             <p>Create your account and enjoy a new shopping experience.</p> <br>
 
@@ -97,9 +97,9 @@
            
            </li>
           
-           <li ><a href="hokwish.html" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
+           <li ><a href="hokwish.html" id="my__wish"> &#9825; </a> </li>
           
-           <li><a> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
+           <li><a> <i style="font-size: 29px;" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
           
     <div id="cart">
         <p>Your cart is currently empty</p>
@@ -120,7 +120,7 @@
          <a href="#" id="for_skin">SKIN</a>
          <a href="brands.html">BRANDS</a>
          <a href="#" id="kits&combos">KITS&COMBOS</a>
-         <a href="offers.html">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
+         <a href="offers.html">OFFERS <sup id="HOTTY">HOT</sup></a>
          <a href="#">TUTORIALS</a>
 
     </div>
@@ -233,9 +233,9 @@
             <p>👋 Hello! Let us know if you have a specific question, or give an idea of what you're looking for. We're happy to make recommendations.</p>
         
             <br>
-            <input type="text" placeholder="Message us"  style="border-radius: 20px; margin:auto;width:100%;padding:8px" >
+            <input type="text" placeholder="Message us"  id="message_you" >
         </div>
-        <div style="line-height: 30px; padding: 10px;font-size: 16px;overflow: scroll;">
+        <div id="msgsss">
             <a href="">What is your policy?</a>
             <hr>
             <a href="">Can i get a update on my order status?</a>
@@ -248,7 +248,7 @@
 
         </div>
 
-        <button style="background-color: black;color: white;border-radius: 20px; padding:10px;margin-left: 80%;" onclick="htta()">X</button>
+        <button id="cutty" onclick="htta()">X</button>
         
     </div>
 
@@ -449,11 +449,11 @@
                 <input type="text", placeholder="E-mail" class="inp1" >
                 <a href=""> <button class="inp2">subscribe</button> </a><br> <br>
                 <div>
-                    <a href="https://www.facebook.com" target="_blank"><i style="font-size:24px; color:white; margin: 5px 10px" class="fa">&#xf230;</i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i id="fafafa" class="fa">&#xf230;</i></a>
                    
-                   <a href="https://twitter.com/?lang=en-in" target="_blank"> <i style="font-size:24px; color:white; margin:5px 10px;" class="fa">&#xf099;</i> </a>
+                   <a href="https://twitter.com/?lang=en-in" target="_blank"> <i id="fafafa" class="fa">&#xf099;</i> </a>
 
-                   <a href="https://www.instagram.com" target="_blank"><i style="font-size:24px; color:white; margin:5px 10px" class="fa">&#xf16d;</i></a>
+                   <a href="https://www.instagram.com" target="_blank"><i id="fafafa" class="fa">&#xf16d;</i></a>
                    
 
                 </div>

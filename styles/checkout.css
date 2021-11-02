@@ -100,3 +100,21 @@
             font-weight: bold;
             font-size: 14px;
         }
+
+        #common__thingss {
+
+        display:flex;justify-content: space-between;align-items: center;
+        }
+
+        #dekhototal{
+            font-size: 20px;font-weight: bold;
+        }
+        #hereis_HR{
+            color: grey; height: 1px;
+        }
+        #inpsub {
+            background-color: #197BBD;color: white;padding: 10px;border-radius: 5px;width:200px; font-size: 18px;
+        }
+        .return_to_cart {
+        text-decoration: none;
+        }

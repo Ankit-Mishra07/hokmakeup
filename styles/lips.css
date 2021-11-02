@@ -420,5 +420,28 @@ html {
 }
 
   
+.font10{
+    font-size: 10px;
+}
+.font15{
+    font-size: 15px;
+}
 
-  
+#my_wishh{
+    font-size:35px; margin:0px; padding:0px
+}
+.font29{
+    font-size: 29px;
+}
+#hotyy{
+    background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;
+}
+.homii{
+    display: inline-block;
+}
+#edit--it{
+    display: inline-block; margin:0px 10px
+}
+.width200{
+    width: 200px;
+}

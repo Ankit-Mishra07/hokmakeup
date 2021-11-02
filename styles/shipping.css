@@ -105,3 +105,39 @@
             box-sizing: border-box;
             text-align: center;
         }
+
+        #main__box{
+            display:grid;grid-template-columns: 50% 50%;
+        }
+        .marg_auto{
+            margin:auto
+        }
+
+        .for_none{
+            text-decoration: none;
+        }
+        #for_myinfo{
+            display:grid;; border: 1px solid rgb(216, 209, 209);padding:0px 10px; grid-template-columns: 10% 80% 10%;margin-top: 30px;
+        }
+        #ship_mtd{
+            text-align: left;
+        }
+
+        #for_hereis{
+            display: flex; justify-content: space-between; border: 1px solid rgb(216, 209, 209);padding:0px 10px;
+        }
+        #bigO{
+            background-color: rgb(65, 65, 245);padding: 1px;color:white;border-radius: 100%;
+        }
+        .for_rutn{
+            display: flex; justify-content: space-between;margin-top: 50px;
+        }
+        .continueto{
+            background-color: #197BBD;color: white;padding:15px;border-radius: 5px;
+        }
+        #rightbox1{
+            width: 100%;
+        }
+        #bodx{
+            display:flex;justify-content: space-between;align-items: center;
+        }

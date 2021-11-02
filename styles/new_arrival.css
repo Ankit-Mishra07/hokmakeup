@@ -434,3 +434,51 @@ background-blend-mode: multiply,multiply;
     }
 
     /* login */
+    .font10{
+        font-size: 10px;
+    }
+    .font15{
+        font-size: 15px;
+    }
+    #CUSTOMER{
+        text-decoration: underline; font-weight: bold;display:inline-block
+    }
+    .cutty{
+        background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+    }
+    #marg-Top{
+        margin-top: 20px;
+    }
+    .my__mail{
+        font-weight: bold;font-size: 12px;
+    }
+    .colorRR{
+        color: red;
+    }
+    .brbrbr{
+        width:100%;padding:10px;border-radius: 3px;
+    }
+    #crated{
+        background-color: #F7F7F7;width:100%
+    }
+    #my__wish{
+        font-size:35px; margin:0px; padding:0px
+    }
+    .font29{
+        font-size: 29px;
+    }
+    #hotty{
+        background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;
+    }
+    #homies{
+        display: inline-block;
+    }
+    #go-away{
+        display: inline-block; margin:0px 10px"
+    }
+    #width200{
+        width: 200px;
+    }
+    #fa__ce{
+        font-size:24px; color:white; margin: 5px 10px
+    }

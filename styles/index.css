@@ -447,3 +447,56 @@ background-blend-mode: multiply,multiply;
             display:none;
         }
     }
+
+
+    .colorB{
+        color: black;
+    }
+    .font10{
+        font-size: 10px;
+    }
+    .font15{
+        font-size: 15px;
+    }
+    #CUSTOMER{
+        text-decoration: underline; font-weight: bold;display:inline-block
+    }
+    .cutty{
+        background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+    }
+    #marg-top{
+        margin-top: 20px;
+    }
+    .my__mail{
+        font-weight: bold;font-size: 12px;
+    }
+    .colorRR{
+        color: red;
+    }
+    .brbrbr{
+        width:100%;padding:10px;border-radius: 3px
+    }
+    #create_tata{
+        background-color: #F7F7F7;width:100%
+    }
+    #my__wish{
+        font-size:35px; margin:0px; padding:0px
+    }
+    .font29{
+        font-size: 29x;
+    }
+    #HOTTY{
+        background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;
+    }
+    #message_you{
+    border-radius: 20px; margin:auto;width:100%;padding:8px
+    }
+    #msgsss{
+        line-height: 30px; padding: 10px;font-size: 16px;overflow: scroll
+    }
+    #cutty{
+        background-color: black;color: white;border-radius: 20px; padding:10px;margin-left: 80%;
+    }
+    #fafafa{
+        font-size:24px; color:white; margin: 5px 10px
+    }

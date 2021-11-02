@@ -256,3 +256,61 @@ html {
     }
 
     /* login */
+
+    .font10{
+        font-size: 10px;
+    }
+    .font15{
+        font-size: 15px;
+    }
+
+    #CUSTOMER{
+        text-decoration: underline; font-weight: bold;display:inline-block
+    }
+    .cutt{
+        background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+    }
+    #marg_top{
+        margin-top: 20px;
+    }
+    .jis-edit{
+        font-weight: bold;font-size: 12px;
+    }
+    .color--red{
+        color: red;
+    }
+    .my__mail{
+        width:100%;padding:10px;border-radius: 3px;
+    }
+    #jia--edit{
+        background-color: #F7F7F7;width:100%
+    }
+    #wishiconka{
+        font-size:35px; margin:0px; padding:0px"
+    }
+    .font29{
+        font-size: 29px;
+    }
+    #hottyy{
+        background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;
+    }
+    #samesame{
+        display: inline-block;
+    }
+    #arrowe{
+        display: inline-block; margin:0px 10px"
+    }
+    #WISHLIST{
+        margin-top: 20px; display: inline-block;
+    }
+    #wishkitable {
+
+    background-color: #F7F7F7; height:40px; font-weight: bold;text-align: center;
+    }
+
+    #width15{
+        width: 15%;
+    }
+    #width30{
+        width: 30%;
+    }

@@ -24,3 +24,24 @@
 }
 
 /* login */
+#CUSTOMER{
+    text-decoration: underline; font-weight: bold;display:inline-block
+}
+.hotty{
+    background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+}
+.marg-topp{
+    margin-top: 20px;
+}
+.my__mail{
+    font-weight: bold;font-size: 12px
+}
+.colorRR{
+    color: red;
+}
+.muinputs{
+    width:90%;padding:10px;border-radius: 3px;
+}
+#crated{
+    background-color: #F7F7F7;width:100
+}
