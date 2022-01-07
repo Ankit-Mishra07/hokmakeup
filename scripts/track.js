@@ -76,15 +76,15 @@ let loginn = document.getElementById("loginn")
 let clicklog = document.getElementById("clicklog")
 let cut = document.getElementById("cut")
 
-clicklog.addEventListener("click" , showlogin)
-function showlogin () {
-   loginn.style.display = "block"
+clicklog.addEventListener("click", showlogin)
+function showlogin() {
+    loginn.style.display = "block"
 }
 
-cut.addEventListener("click" , hiddlogin)
+cut.addEventListener("click", hiddlogin)
 
 function hiddlogin() {
-   loginn.style.display = "none"
+    loginn.style.display = "none"
 }
 
 
@@ -101,31 +101,31 @@ function loggin(event) {
     let all_users = JSON.parse(localStorage.getItem("hok_users"))
 
 
-    all_users.forEach(function(user){
+    all_users.forEach(function (user) {
 
-        if(email.value == user.email && password.value == user.password) {
+        if (email.value == user.email && password.value == user.password) {
 
             email.value = ""
-                password.value = ""
-            setTimeout(function(){
-               
+            password.value = ""
+            setTimeout(function () {
+
                 window.location.href = "index.html"
-            },2000)
-            
-        }else {
-        flag = true
-        return
+            }, 2000)
+
+        } else {
+            flag = true
+            return
         }
 
     })
 
-  
-  
+
+
 }
 
-if(flag == true) {
-        alert("Invalid Credentials")
-    }
+if (flag == true) {
+    alert("Invalid Credentials")
+}
 
 
 
