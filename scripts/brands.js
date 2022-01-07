@@ -6,13 +6,13 @@ let text = search.querySelectorAll("a")
 
 let search_input = document.getElementById("search_input")
 
-search_input.addEventListener("click",show)
+search_input.addEventListener("click", show)
 
-Top_search.addEventListener("mouseleave",hide)
+Top_search.addEventListener("mouseleave", hide)
 
-function show(e) { 
-search_input.textContent = text.textContent
-   search.style.display = "flex"
+function show(e) {
+    search_input.textContent = text.textContent
+    search.style.display = "flex"
 }
 function hide() {
     search.style.display = "none"
@@ -26,8 +26,8 @@ let cart_icon = document.getElementById("cart_icon")
 cart_icon.addEventListener("click", pop)
 cart_pop.addEventListener("mouseleave", hiden)
 
-function pop () {
-    cart_pop.style.display = "block" 
+function pop() {
+    cart_pop.style.display = "block"
 }
 function hiden() {
     cart_pop.style.display = "none"
@@ -40,13 +40,13 @@ let makup = document.getElementsByClassName("makeup")[0]
 
 let make_up = document.getElementById("make_up")
 
-make_up.addEventListener("mouseover" , disply)
-make_up.addEventListener("mouseleave" , hidemakeup)
-function disply(){
-    makup.style.display ="flex"
+make_up.addEventListener("mouseover", disply)
+make_up.addEventListener("mouseleave", hidemakeup)
+function disply() {
+    makup.style.display = "flex"
 }
 function hidemakeup() {
-    makup.style.display="none"
+    makup.style.display = "none"
 }
 
 // end of makeup
@@ -57,13 +57,13 @@ let skin = document.getElementsByClassName("makeup")[1]
 
 let for_skin = document.getElementById("for_skin")
 
-for_skin.addEventListener("mouseover" , disply2)
-for_skin.addEventListener("mouseleave" , hideskin)
-function disply2(){
-    skin.style.display ="flex"
+for_skin.addEventListener("mouseover", disply2)
+for_skin.addEventListener("mouseleave", hideskin)
+function disply2() {
+    skin.style.display = "flex"
 }
 function hideskin() {
-    skin.style.display="none"
+    skin.style.display = "none"
 }
 //end skin pop
 
@@ -74,60 +74,60 @@ function hideskin() {
 //login start
 
 let loginn = document.getElementById("loginn")
-    let clicklog = document.getElementById("clicklog")
-    let cut = document.getElementById("cut")
+let clicklog = document.getElementById("clicklog")
+let cut = document.getElementById("cut")
 
-    clicklog.addEventListener("click" , showlogin)
-   function showlogin () {
-       loginn.style.display = "block"
-   }
+clicklog.addEventListener("click", showlogin)
+function showlogin() {
+    loginn.style.display = "block"
+}
 
-   cut.addEventListener("click" , hiddlogin)
+cut.addEventListener("click", hiddlogin)
 
-   function hiddlogin() {
-       loginn.style.display = "none"
-   }
-
-
-   let flag = false;
-
-   function loggin(event) {
-        event.preventDefault()
+function hiddlogin() {
+    loginn.style.display = "none"
+}
 
 
+let flag = false;
 
-        let email = document.getElementById("email")
-        let password = document.getElementById("password")
-
-        let all_users = JSON.parse(localStorage.getItem("hok_users"))
+function loggin(event) {
+    event.preventDefault()
 
 
-        all_users.forEach(function(user){
 
-            if(email.value == user.email && password.value == user.password) {
+    let email = document.getElementById("email")
+    let password = document.getElementById("password")
 
-                email.value = ""
-                    password.value = ""
-                setTimeout(function(){
-                   
-                    window.location.href = "index.html"
-                },2000)
-                
-            }else {
+    let all_users = JSON.parse(localStorage.getItem("hok_users"))
+
+
+    all_users.forEach(function (user) {
+
+        if (email.value == user.email && password.value == user.password) {
+
+            email.value = ""
+            password.value = ""
+            setTimeout(function () {
+
+                window.location.href = "index.html"
+            }, 2000)
+
+        } else {
             flag = true
             return
-            }
-
-        })
-
-      
-      
-    }
-
-    if(flag == true) {
-            alert("Invalid Credentials")
         }
 
-    
+    })
+
+
+
+}
+
+if (flag == true) {
+    alert("Invalid Credentials")
+}
+
+
 
     //login end
