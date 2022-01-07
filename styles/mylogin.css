@@ -1,47 +1,71 @@
-   /* login */
-   #loginn {
-    margin:auto;
+/* login */
+#loginn {
+    margin: auto;
     background-color: white;
     position: absolute;
-    width:20%;
-    padding:15px 20px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+    width: 20%;
+    padding: 15px 20px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    ;
 
 }
+
 #myform {
-    text-align: center;background-color: white;width:100%; padding:10px;border-radius: 3px;font-size: 16px;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 16px;
 }
+
 #myform:hover {
-    background-color:rgb(80, 65, 65);
-    color:rgb(252, 29, 29);
+    background-color: rgb(80, 65, 65);
+    color: rgb(252, 29, 29);
 }
-#account{
-    background-color:rgb(80, 65, 65);
-    color:rgb(252, 29, 29);
-    width:100%;
-    padding:10px;
+
+#account {
+    background-color: rgb(80, 65, 65);
+    color: rgb(252, 29, 29);
+    width: 100%;
+    padding: 10px;
     border-radius: 4px;
 }
 
 /* login */
-#CUSTOMER{
-    text-decoration: underline; font-weight: bold;display:inline-block
+#CUSTOMER {
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block
 }
-.hotty{
-    background-color: white;font-weight: bold;border-color: white;margin-left: 30%;
+
+.hotty {
+    background-color: white;
+    font-weight: bold;
+    border-color: white;
+    margin-left: 30%;
 }
-.marg-topp{
+
+.marg-topp {
     margin-top: 20px;
 }
-.my__mail{
-    font-weight: bold;font-size: 12px
+
+.my__mail {
+    font-weight: bold;
+    font-size: 12px
 }
-.colorRR{
+
+.colorRR {
     color: red;
 }
-.muinputs{
-    width:90%;padding:10px;border-radius: 3px;
+
+.muinputs {
+    width: 90%;
+    padding: 10px;
+    border-radius: 3px;
 }
-#crated{
-    background-color: #F7F7F7;width:100
+
+#crated {
+    background-color: #F7F7F7;
+    width: 100
 }
